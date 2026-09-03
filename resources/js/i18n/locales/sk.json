@@ -1,0 +1,177 @@
+{
+  "hero": {
+    "title": "Váš spoľahlivý partner v ubytovaní a správe budov",
+    "subtitle": "S viac ako 25-ročnými skúsenosťami ponúkame integrované riešenia na mieru pre upratovanie, údržbu a správu budov",
+    "button_services": "Objavte naše služby",
+    "button_contact": "Kontaktujte nás"
+  },
+  "services": {
+    "section_title": "Naša široká škála služieb",
+    "section_subtitle": "Poskytujeme riešenia na kľúč pre všetky potreby vašich zariadení a budov – s nemeckou precíznosťou a kvalitou.",
+    "learn_more": "Podrobné informácie",
+    "categories": {
+      "hotel": {
+        "title": "Upratovanie hotelov a housekeeping",
+        "description": "Od upratovania izieb až po umyváreň riadu – dokonalá hygiena a efektívne procesy v každej časti vášho hotela."
+      },
+      "building": {
+        "title": "Profesionálne upratovanie budov",
+        "description": "Kancelárie, komerčné priestory, upratovanie po stavbe a špeciálne čistenie – rozžiarime vaše nehnuteľnosti."
+      },
+      "renovation": {
+        "title": "Renovácia, opravy a údržba",
+        "description": "Maľovanie, omietkárske a sadrokartonárske práce, pokládka podláh a drobné opravy."
+      }
+    },
+    "card": {
+      "aria": "Získajte viac informácií o {{service}}",
+      "button": "Detaily"
+    }
+  },
+  "servicesList": {
+    "title": "Služby",
+    "subtitle": "Objavte naše komplexné služby pre váš domov aj firmu",
+    "meta_title": "Naše služby - O&I CLEAN group GmbH",
+    "meta_description": "Profesionálne upratovanie, renovácia a správa budov.",
+    "loading": "Načítava sa…",
+    "contact_cta": "Kontaktujte nás",
+    "contact_cta_aria": "Kontaktujte nás teraz"
+  },
+  "contact": {
+    "page_title": "Kontakt",
+    "intro_static_text": "Zadarmo a nezáväzne –",
+    "intro_dynamic_text": "ozveme sa vám čo najskôr",
+    "title": "Kontaktujte nás",
+    "description": "Profesionálne upratovacie služby pre vašu firmu. Radi vás budeme informovať individuálne.",
+    "submit_label": "Odoslať správu",
+    "submit_failed": "Správu sa nepodarilo odoslať.",
+    "select_placeholder": "Prosím vyberte",
+    "success_title": "Úspech!",
+    "success_message": "Vaša správa bola úspešne odoslaná. Čoskoro vás budeme kontaktovať.",
+    "redirecting": "Stránka sa znova načítava...",
+    "phone_label": "Telefón",
+    "submitting": "Odosielanie...",
+    "success_sub": "Čoskoro sa vám ozveme.",
+    "email_label": "Email",
+    "hours_label": "Otváracie hodiny",
+    "hours_value": "Po. - Pia.: 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Meno",
+      "phone": "Telefón",
+      "email": "Email",
+      "message": "Správa",
+      "other": "Pole"
+    },
+    "required": {
+      "name": "Meno je povinné.",
+      "phone": "Telefón je povinný.",
+      "email": "Email je povinný.",
+      "message": "Správa je povinná."
+    },
+    "error_generic": "Vyskytla sa chyba. Prosím skúste to znovu."
+  },
+  "footer": {
+    "description": "Stojíme pri vás s nemeckou dôkladnosťou a spoľahlivosťou v profesionálnom upratovaní, údržbe a správe budov.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Odkazy",
+    "contact_title": "Kontakt",
+    "link_about": "O nás",
+    "link_contact": "Kontakt",
+    "link_contact_href": "/contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Súkromie",
+    "link_imprint": "Impresum",
+    "link_privacy_bottom": "Súkromie",
+    "copyright": "Všetky práva vyhradené.",
+    "back_to_top": "Späť nahor",
+    "region_label": "Päta a kontaktné informácie",
+    "home_aria": "O&I CLEAN - Domovská stránka",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Rýchle odkazy",
+    "phone_aria": "Telefónne číslo",
+    "email_aria": "Email"
+  },
+  "header": {
+    "topbar_tagline": "Upratovanie, ktorému môžete veriť — servis 24/7",
+    "cta_label": "Dohodnúť si stretnutie",
+    "cta_href": "/contact",
+    "hide_topbar": "Skryť horný panel",
+    "home_aria": "Domovská stránka",
+    "main_nav": "Hlavná navigácia",
+    "menu_open": "Otvoriť menu",
+    "menu_close": "Zatvoriť menu",
+    "language": "Jazyk",
+    "impressum": "Impresum",
+    "contact_button": "Kontakt"
+  },
+  "nav": {
+    "home": "Domov"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Domov",
+    "breadcrumbs_page": "Stránka",
+    "empty_content": "Obsah bude čoskoro pridaný."
+  },
+  "offerDock": {
+    "title": "Ponuka",
+    "subtitle": "Zadarmo a nezáväzne",
+    "button": "Vyžiadať",
+    "aria_open": "Otvoriť panel ponuky",
+    "aria_close": "Zatvoriť panel ponuky"
+  },
+  "quote_modal": {
+    "title": "Vyžiadať cenovú ponuku",
+    "scrim_aria": "Zatvoriť okno",
+    "close_aria": "Zatvoriť",
+    "field_name": "Meno",
+    "field_email": "Email",
+    "field_phone": "Telefón",
+    "field_service": "Služba",
+    "field_message": "Správa",
+    "service_placeholder": "Prosím vyberte…",
+    "service_hotel_cleaning": "Upratovanie hotelov",
+    "service_building_cleaning": "Upratovanie budov",
+    "service_window_cleaning": "Umývanie okien",
+    "service_maintenance_cleaning": "Bežné upratovanie",
+    "service_basic_cleaning": "Generálne upratovanie",
+    "service_carpet_cleaning": "Čistenie kobercov",
+    "service_other": "Iné",
+    "service_general": "Všeobecné",
+    "message_placeholder": "Čo pre vás môžeme urobiť?",
+    "consent_prefix": "Súhlasím so spracovaním mojich údajov v súlade so ",
+    "consent_link": "zásadami ochrany osobných údajov",
+    "consent_suffix": ".",
+    "cancel": "Zrušiť",
+    "submit": "Vyžiadať",
+    "sending": "Odosiela sa…",
+    "error_consent": "Prosím udeľte súhlas so spracovaním údajov.",
+    "error_generic": "Niečo sa nepodarilo. Prosím skúste to znovu.",
+    "subject_prefix": "Žiadosť o ponuku",
+    "thank_you_title": "Ďakujeme!",
+    "thank_you_text": "Vaša žiadosť bola prijatá, čoskoro vás budeme kontaktovať.",
+    "close_button": "Zatvoriť"
+  },
+  "cookies": {
+    "title": "Predvoľby súborov cookie",
+    "message": "Súbory cookie používame na zabezpečenie najlepšieho zážitku na našom webe.",
+    "accept_all": "Prijať všetko",
+    "reject": "Odmietnuť",
+    "save": "Uložiť výber",
+    "privacy_policy": "Zásady ochrany osobných údajov",
+    "imprint": "Impresum"
+  },
+  "required": {
+    "name": "Meno je povinné.",
+    "phone": "Telefón je povinný.",
+    "email": "Email je povinný.",
+    "message": "Správa je povinná."
+  },
+  "submit_error": "Chyba! Prosím skúste to znovu."
+}

@@ -1,0 +1,203 @@
+{
+  "hero": {
+    "title": "Votre partenaire fiable en hébergement et gestion d'installations",
+    "subtitle": "Avec plus de 25 ans d'expérience, nous offrons des solutions intégrées sur mesure pour le nettoyage, la maintenance et la gestion technique.",
+    "button_services": "Découvrez nos services",
+    "button_contact": "Contactez-nous maintenant"
+  },
+  "services": {
+    "section_title": "Notre large gamme de services",
+    "section_subtitle": "Nous fournissons des solutions clés en main pour tous les besoins de vos installations et bâtiments – avec la précision et la qualité allemandes.",
+    "learn_more": "Informations détaillées",
+    "categories": {
+      "hotel": {
+        "title": "Nettoyage d'hôtel et entretien ménager",
+        "description": "Du nettoyage des chambres à la plonge – une hygiène impeccable et des processus efficaces dans chaque zone de votre hôtel."
+      },
+      "building": {
+        "title": "Nettoyage professionnel de bâtiments",
+        "description": "Bureaux, zones commerciales, nettoyage après construction et nettoyages spéciaux – nous faisons briller vos propriétés."
+      },
+      "renovation": {
+        "title": "Rénovation, réparation et entretien",
+        "description": "Peinture, travaux de plâtre et cloisons sèches, revêtement de sol et petites réparations."
+      }
+    },
+    "card": {
+      "aria": "Obtenez plus d'informations sur {{service}}",
+      "button": "Détails"
+    }
+  },
+  "servicesList": {
+    "title": "Services",
+    "subtitle": "Découvrez nos services complets pour votre domicile et votre entreprise",
+    "meta_title": "Nos Services - O&I CLEAN group GmbH",
+    "meta_description": "Nettoyage professionnel, rénovation et gestion d'installations.",
+    "loading": "Chargement…",
+    "contact_cta": "Contactez-nous",
+    "contact_cta_aria": "Contactez-nous maintenant"
+  },
+  "contact": {
+    "page_title": "Contact",
+    "intro_static_text": "Gratuit et sans engagement –",
+    "intro_dynamic_text": "nous vous répondrons dès que possible",
+    "title": "Contactez-nous",
+    "description": "Services de nettoyage professionnel pour votre entreprise. Nous sommes heureux de vous informer individuellement.",
+    "submit_label": "Envoyer le message",
+    "submit_failed": "Le message n'a pas pu être envoyé.",
+    "select_placeholder": "Veuillez sélectionner",
+    "success_title": "Succès !",
+    "success_message": "Votre message a été envoyé avec succès. Nous vous recontacterons sous peu.",
+    "redirecting": "La page se recharge...",
+    "phone_label": "Téléphone",
+    "submitting": "Envoi en cours...",
+    "success_sub": "Nous vous recontacterons sous peu.",
+    "email_label": "E-mail",
+    "hours_label": "Heures d'ouverture",
+    "hours_value": "Lun. - Ven. : 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Nom",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "message": "Message",
+      "other": "Champ"
+    },
+    "required": {
+      "name": "Le nom est requis.",
+      "phone": "Le téléphone est requis.",
+      "email": "L'e-mail est requis.",
+      "message": "Le message est requis."
+    },
+    "error_generic": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "footer": {
+    "description": "Nous sommes à vos côtés avec la rigueur et la fiabilité allemandes en matière de nettoyage professionnel, de maintenance et de gestion d'installations.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Liens",
+    "contact_title": "Contact",
+    "link_about": "À propos de nous",
+    "link_contact": "Contact",
+    "link_contact_href": "/contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Confidentialité",
+    "link_imprint": "Mentions légales",
+    "link_privacy_bottom": "Confidentialité",
+    "copyright": "Tous droits réservés.",
+    "back_to_top": "Retour en haut",
+    "region_label": "Pied de page et informations de contact",
+    "home_aria": "O&I CLEAN - Accueil",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Liens rapides",
+    "phone_aria": "Numéro de téléphone",
+    "email_aria": "E-mail"
+  },
+  "header": {
+    "topbar_tagline": "Un nettoyage en qui vous pouvez avoir confiance — Service 24/7",
+    "cta_label": "Prendre rendez-vous",
+    "cta_href": "/contact",
+    "hide_topbar": "Masquer la barre supérieure",
+    "home_aria": "Page d'accueil",
+    "main_nav": "Navigation principale",
+    "menu_open": "Ouvrir le menu",
+    "menu_close": "Fermer le menu",
+    "language": "Langue",
+    "impressum": "Mentions légales",
+    "contact_button": "Contact"
+  },
+  "nav": {
+    "home": "Accueil"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Accueil",
+    "breadcrumbs_page": "Page",
+    "empty_content": "Le contenu sera ajouté bientôt."
+  },
+  "offerDock": {
+    "title": "Offre",
+    "subtitle": "Gratuit et sans engagement",
+    "button": "Demander",
+    "aria_open": "Ouvrir le panneau d'offre",
+    "aria_close": "Fermer le panneau d'offre"
+  },
+  "quote_modal": {
+    "title": "Demander un devis",
+    "scrim_aria": "Fermer la fenêtre",
+    "close_aria": "Fermer",
+    "field_name": "Nom",
+    "field_email": "E-mail",
+    "field_phone": "Téléphone",
+    "field_service": "Service",
+    "field_message": "Message",
+    "service_placeholder": "Veuillez sélectionner…",
+    "service_hotel_cleaning": "Nettoyage d'hôtel",
+    "service_building_cleaning": "Nettoyage de bâtiment",
+    "service_window_cleaning": "Nettoyage de vitres",
+    "service_maintenance_cleaning": "Nettoyage d'entretien",
+    "service_basic_cleaning": "Nettoyage général/approfondi",
+    "service_carpet_cleaning": "Nettoyage de tapis",
+    "service_other": "Autre",
+    "service_general": "Général",
+    "message_placeholder": "Que pouvons-nous faire pour vous ?",
+    "consent_prefix": "J'accepte le traitement de mes données conformément à la ",
+    "consent_link": "politique de confidentialité",
+    "consent_suffix": ".",
+    "cancel": "Annuler",
+    "submit": "Demander",
+    "sending": "Envoi en cours…",
+    "error_consent": "Veuillez donner votre consentement pour le traitement des données.",
+    "error_generic": "Une erreur est survenue. Veuillez réessayer.",
+    "subject_prefix": "Demande de devis",
+    "thank_you_title": "Merci !",
+    "thank_you_text": "Votre demande a été reçue, nous vous contacterons prochainement.",
+    "close_button": "Fermer"
+  },
+  "errors": {
+    "notFound": {
+      "404": "La page demandée est introuvable.",
+      "500": "Une erreur serveur est survenue.",
+      "home": "Retour à l'accueil",
+      "contact": "Contactez-nous",
+      "reload": "Recharger la page"
+    }
+  },
+  "ui": {
+    "loading": {
+      "message": "Chargement du contenu…"
+    }
+  },
+  "cookies": {
+    "title": "Préférences de Cookies",
+    "message": "Nous utilisons des cookies pour vous garantir la meilleure expérience.",
+    "cat_necessary": "Cookies Nécessaires",
+    "cat_analytics": "Cookies d'Analyse",
+    "cat_marketing": "Cookies Marketing",
+    "desc_necessary": "Requis pour le fonctionnement du site.",
+    "desc_analytics": "Collectent des informations sur l'utilisation.",
+    "desc_marketing": "Utilisés pour des publicités pertinentes.",
+    "required": "Requis",
+    "accept_all": "Tout accepter",
+    "reject": "Refuser",
+    "save": "Enregistrer la sélection",
+    "settings": "Préférences",
+    "hide_details": "Masquer les détails",
+    "privacy_policy": "Politique de confidentialité",
+    "imprint": "Mentions légales"
+  },
+  "common": {
+    "ok": "OK"
+  },
+  "required": {
+    "name": "Le nom est requis.",
+    "phone": "Le téléphone est requis.",
+    "email": "L'e-mail est requis.",
+    "message": "Le message est requis."
+  },
+  "submit_error": "Erreur ! Veuillez réessayer."
+}

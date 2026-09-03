@@ -1,0 +1,274 @@
+/* ==========================================================================
+   Service cards — calmer, rounded, modern
+   Loads after redesign.css and replaces the hairline-grid "editorial" cards
+   (sharp corners, accent number badges, condensed uppercase titles).
+   All colors still derive from the Global Panel theme variables.
+   ========================================================================== */
+
+/* Small brand-colored text (links, eyebrows) is unreadable on dark surfaces
+   when the panel's primary is a deep color — lift it toward white there. */
+html.dark {
+    --ui-primary-ink: color-mix(in srgb, var(--ui-primary) 42%, #ffffff 58%);
+}
+
+/* --------------------------------------------------------------- sections */
+.svc-section,
+.services-section {
+    border-bottom: 1px solid var(--ui-line);
+    background: var(--ui-bg) !important;
+}
+
+.svc-section {
+    background: color-mix(in srgb, var(--ui-primary) 4%, var(--ui-bg) 96%) !important;
+}
+
+.svc-title,
+.services-title {
+    max-width: 820px;
+    margin-bottom: clamp(28px, 3.5vw, 46px);
+    padding-left: 0;
+    border-left: 0;
+    color: var(--ui-h2);
+    font-family: inherit;
+    font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    text-transform: none;
+    text-wrap: balance;
+}
+
+/* ------------------------------------------------------------------ grids */
+/* drop the hairline "table" look; cards sit on the section background now */
+.svc-grid,
+.services-grid {
+    border: 0;
+    background: transparent;
+    counter-reset: none;
+}
+
+.svc-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* .services-section .services-grid keeps its own responsive column count
+   (ServicesGrid.css), which is more specific — only the gap is normalised */
+.services-section .services-grid {
+    gap: 20px;
+}
+
+/* ------------------------------------------------------------------ cards */
+.svc-card,
+.service-card,
+.services-section .service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    min-height: 0;
+    overflow: hidden;
+    counter-increment: none;
+    border: 1px solid var(--ui-line);
+    border-radius: 22px;
+    background: var(--ui-surface);
+    box-shadow: none;
+    transition:
+        transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+/* the accent number badge goes away — that was the loudest part */
+.svc-card::before,
+.services-section .service-card::before {
+    content: none;
+}
+
+.svc-card:hover,
+.service-card:hover,
+.services-section .service-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--ui-primary) 32%, transparent);
+    box-shadow: 0 18px 40px color-mix(in srgb, var(--ui-text) 10%, transparent);
+}
+
+/* ----------------------------------------------------------------- images */
+.svc-card-img-wrap,
+.services-section .service-card__image-wrapper,
+.service-card__image-wrapper {
+    height: 208px;
+    min-height: 208px;
+    aspect-ratio: auto;
+    border-radius: 0;
+    background: color-mix(in srgb, var(--ui-primary) 7%, var(--ui-bg) 93%);
+}
+
+.svc-card-img,
+.services-section .service-card__image,
+.service-card__image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* a category without an image rendered as a large empty block — collapse the
+   media area instead so the card stays a clean, compact tile */
+.service-card__image-wrapper:has(.service-card__image-placeholder) {
+    display: none;
+}
+
+.service-card:has(.service-card__image-placeholder) .service-card__content {
+    padding-top: 24px;
+}
+
+/* subtle zoom only — no saturation/contrast shift */
+.svc-card:hover .svc-card-img,
+.services-section .service-card:hover .service-card__image,
+.service-card:hover .service-card__image {
+    transform: scale(1.04);
+    filter: none;
+}
+
+/* ------------------------------------------------------------------- body */
+.svc-card-body,
+.services-section .service-card__content,
+.service-card__content {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 22px 24px 24px;
+    text-align: left;
+}
+
+.svc-card-title,
+.services-section .service-card__title,
+.services-section .service-card__title span,
+.service-card__title {
+    margin: 0;
+    color: var(--ui-h3) !important;
+    font-family: inherit;
+    font-size: 1.08rem;
+    font-weight: 750;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    text-transform: none;
+}
+
+.svc-card-desc {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    color: var(--ui-muted) !important;
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+/* --------------------------------------------------------------- cta link */
+.services-section .service-card__button,
+.service-card__button {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 7px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 0;
+    color: var(--ui-primary-ink, var(--ui-primary)) !important;
+    font-size: 0.85rem;
+    font-weight: 750;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.services-section .service-card__arrow,
+.service-card__arrow {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    color: currentColor;
+    transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-card:hover .service-card__arrow {
+    transform: translateX(4px);
+}
+
+/* the base stylesheet draws a 2px focus/hover ring — the border handles it now */
+.service-card::after {
+    display: none;
+}
+
+/* app.css pins card backgrounds to hsl(var(--card)) with a later, equal-weight
+   rule — this outranks it so the surface keeps tracking the panel theme */
+.svc-grid .svc-card,
+.services-grid .service-card,
+.dark .svc-grid .svc-card,
+.dark .services-grid .service-card {
+    border-color: var(--ui-line);
+    background-color: var(--ui-surface);
+}
+
+/* -------------------------------------------------------------- responsive */
+@media (max-width: 1024px) {
+    .svc-grid,
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .svc-card-img-wrap,
+    .services-section .service-card__image-wrapper,
+    .service-card__image-wrapper {
+        height: 200px;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .svc-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .svc-card,
+    .service-card,
+    .services-section .service-card {
+        border-radius: 19px;
+    }
+    .svc-card-img-wrap,
+    .services-section .service-card__image-wrapper,
+    .service-card__image-wrapper {
+        height: 210px;
+        min-height: 210px;
+    }
+    .svc-card-body,
+    .services-section .service-card__content,
+    .service-card__content {
+        padding: 20px;
+    }
+    .svc-title,
+    .services-title {
+        padding-left: 0;
+        border-left: 0;
+        font-size: clamp(1.75rem, 7vw, 2.3rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .svc-card,
+    .service-card,
+    .svc-card-img,
+    .service-card__image,
+    .service-card__arrow {
+        transition: none !important;
+    }
+}

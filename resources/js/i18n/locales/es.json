@@ -1,0 +1,181 @@
+{
+  "hero": {
+    "title": "Su socio confiable en alojamiento y gestión de instalaciones",
+    "subtitle": "Con más de 25 años de experiencia, ofrecemos soluciones integradas a medida para limpieza, mantenimiento y gestión de instalaciones.",
+    "button_services": "Descubra nuestros servicios",
+    "button_contact": "Contáctenos ahora"
+  },
+  "services": {
+    "section_title": "Nuestra amplia gama de servicios",
+    "section_subtitle": "Ofrecemos soluciones llave en mano para todas las necesidades de sus instalaciones y edificios, con precisión y calidad alemanas.",
+    "learn_more": "Información detallada",
+    "categories": {
+      "hotel": {
+        "title": "Limpieza de hoteles y ama de llaves",
+        "description": "Desde la limpieza de habitaciones jusqu'à la zona de lavado: higiene impecable y procesos eficientes en cada área de su hotel."
+      },
+      "building": {
+        "title": "Limpieza profesional de edificios",
+        "description": "Oficinas, áreas comerciales, limpieza post-construcción y limpiezas especiales: hacemos que sus propiedades brillen."
+      },
+      "renovation": {
+        "title": "Renovación, reparación y mantenimiento",
+        "description": "Pintura, trabajos de yeso y paneles de yeso, suelos y pequeñas reparaciones."
+      }
+    },
+    "card": {
+      "aria": "Obtenga más información sobre {{service}}",
+      "button": "Detalles"
+    }
+  },
+  "servicesList": {
+    "title": "Servicios",
+    "subtitle": "Descubra nuestros servicios integrales para su hogar y negocio",
+    "meta_title": "Nuestros Servicios - O&I CLEAN group GmbH",
+    "meta_description": "Limpieza profesional, renovación y gestión de instalaciones.",
+    "loading": "Cargando…",
+    "contact_cta": "Contáctenos",
+    "contact_cta_aria": "Contáctenos ahora"
+  },
+  "contact": {
+    "page_title": "Contacto",
+    "intro_static_text": "Gratis y sin compromiso –",
+    "intro_dynamic_text": "le responderemos lo antes posible",
+    "title": "Contáctenos",
+    "description": "Servicios de limpieza profesional para su empresa. Estaremos encantados de informarle individualmente.",
+    "submit_label": "Enviar mensaje",
+    "submit_failed": "No se pudo enviar el mensaje.",
+    "select_placeholder": "Por favor seleccione",
+    "success_title": "¡Éxito!",
+    "success_message": "Su mensaje ha sido enviado con éxito. Nos pondremos en contacto con usted en breve.",
+    "redirecting": "La página se está recargando...",
+    "phone_label": "Teléfono",
+    "submitting": "Enviando...",
+    "success_sub": "Nos pondremos en contacto con usted en breve.",
+    "email_label": "Correo electrónico",
+    "hours_label": "Horario de apertura",
+    "hours_value": "Lun. - Vie.: 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Nombre",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "other": "Campo"
+    },
+    "required": {
+      "name": "El nombre es obligatorio.",
+      "phone": "El teléfono es obligatorio.",
+      "email": "El correo electrónico es obligatorio.",
+      "message": "El mensaje es obligatorio."
+    },
+    "error_generic": "Ocurrió un error. Por favor, inténtelo de nuevo."
+  },
+  "footer": {
+    "description": "Estamos a su lado con la minuciosidad y confiabilidad alemanas en limpieza profesional, mantenimiento y gestión de instalaciones.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Enlaces",
+    "contact_title": "Contacto",
+    "link_about": "Sobre nosotros",
+    "link_contact": "Contacto",
+    "link_contact_href": "/contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Privacidad",
+    "link_imprint": "Aviso legal",
+    "link_privacy_bottom": "Privacidad",
+    "copyright": "Todos los derechos reservados.",
+    "back_to_top": "Volver arriba",
+    "region_label": "Pie de página e información de contacto",
+    "home_aria": "O&I CLEAN - Inicio",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Enlaces rápidos",
+    "phone_aria": "Número de teléfono",
+    "email_aria": "Correo electrónico"
+  },
+  "header": {
+    "topbar_tagline": "Limpieza en la que puede confiar — Servicio 24/7",
+    "cta_label": "Reservar una cita",
+    "cta_href": "/contact",
+    "hide_topbar": "Ocultar barra superior",
+    "home_aria": "Página de inicio",
+    "main_nav": "Navegación principal",
+    "menu_open": "Abrir menú",
+    "menu_close": "Cerrar menú",
+    "language": "Idioma",
+    "impressum": "Aviso legal",
+    "contact_button": "Contacto"
+  },
+  "nav": {
+    "home": "Inicio"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Inicio",
+    "breadcrumbs_page": "Página",
+    "empty_content": "El contenido se agregará pronto."
+  },
+  "offerDock": {
+    "title": "Oferta",
+    "subtitle": "Gratis y sin compromiso",
+    "button": "Solicitar",
+    "aria_open": "Abrir panel de oferta",
+    "aria_close": "Cerrar panel de oferta"
+  },
+  "quote_modal": {
+    "title": "Solicitar presupuesto",
+    "scrim_aria": "Cerrar modal",
+    "close_aria": "Cerrar",
+    "field_name": "Nombre",
+    "field_email": "Correo electrónico",
+    "field_phone": "Teléfono",
+    "field_service": "Servicio",
+    "field_message": "Mensaje",
+    "service_placeholder": "Por favor seleccione…",
+    "service_hotel_cleaning": "Limpieza de hoteles",
+    "service_building_cleaning": "Limpieza de edificios",
+    "service_window_cleaning": "Limpieza de ventanas",
+    "service_maintenance_cleaning": "Limpieza de mantenimiento",
+    "service_basic_cleaning": "Limpieza general/profunda",
+    "service_carpet_cleaning": "Limpieza de alfombras",
+    "service_other": "Otro",
+    "service_general": "General",
+    "message_placeholder": "¿Qué podemos hacer por usted?",
+    "consent_prefix": "Acepto el procesamiento de mis datos de acuerdo con la ",
+    "consent_link": "política de privacidad",
+    "consent_suffix": ".",
+    "cancel": "Cancelar",
+    "submit": "Solicitar",
+    "sending": "Enviando…",
+    "error_consent": "Por favor, dé su consentimiento para el procesamiento de datos.",
+    "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo.",
+    "subject_prefix": "Solicitud de presupuesto",
+    "thank_you_title": "¡Gracias!",
+    "thank_you_text": "Hemos recibido su solicitud, nos pondremos en contacto con usted en breve.",
+    "close_button": "Cerrar"
+  },
+  "errors": {
+    "notFound": {
+      "404": "No se pudo encontrar la página solicitada.",
+      "home": "Volver al inicio",
+      "contact": "Contáctenos"
+    }
+  },
+  "cookies": {
+    "title": "Preferencias de Cookies",
+    "message": "Utilizamos cookies para asegurar que tenga la mejor experiencia.",
+    "accept_all": "Aceptar todo",
+    "reject": "Rechazar",
+    "save": "Guardar selección"
+  },
+  "required": {
+    "name": "El nombre es obligatorio.",
+    "phone": "El teléfono es obligatorio.",
+    "email": "El correo electrónico es obligatorio.",
+    "message": "El mensaje es obligatorio."
+  }
+}

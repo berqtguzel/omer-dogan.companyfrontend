@@ -1,0 +1,202 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Above-the-fold layout — head'de yüklenir, FOUC önlenir */
+@import './critical.css';
+@import './header.css';
+@import './Footer.css';
+@import './HeroSection.css';
+@import './ServicesGrid.css';
+@import './ServiceCard.css';
+@import './ServiceCategories.css';
+@import './language-switcher.css';
+@import './redesign.css';
+@import './cards-modern.css';
+@import './ReviewsSection.css';
+@import './HomeFaqSection.css';
+
+/* ===================
+   🎨 Theme Variables
+   =================== */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --section: 210 20% 98%;
+  --surface: 0 0% 100%;
+  --card: var(--surface);
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: var(--surface);
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --section: 222 38% 8%;
+  --surface: 222 32% 11%;
+  --card: 222 32% 11%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 32% 11%;
+  --popover-foreground: 210 40% 98%;
+  --secondary: 217 25% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 25% 17%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 217 25% 19%;
+  --accent-foreground: 210 40% 98%;
+  --border: 217 22% 24%;
+  --input: 217 22% 24%;
+  --ring: 217 91% 65%;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* `overflow-x: hidden` turns <body> into a scroll container, which breaks the
+   sticky header. `clip` suppresses the same horizontal overflow without it.
+   Browsers without `clip` support fall back to the `hidden` rule above. */
+body {
+  overflow-x: clip;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-display: swap; /* Prevent layout shift during font load */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Inertia loading state fix */
+html.inertia-loading body {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+/* Cards & panels auto theme support */
+.svc-card,
+.service-card,
+.odock__panel,
+.drawer__panel,
+.popover,
+.modal,
+.card {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+}
+
+.dark .bg-white {
+  background-color: hsl(var(--card)) !important;
+}
+
+.cookie-icon {
+  color: var(--button-color);
+}
+/* Lazy loading görsel optimizasyonu */
+.lazy-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.4s ease-in-out, filter 0.4s ease-in-out;
+    opacity: 0;
+    filter: blur(8px);
+}
+
+.lazy-img.loaded {
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Replaced elements must remain paint-stable while scrolling. Applying
+   content-visibility directly to images/videos can make them briefly vanish
+   when the browser moves them in and out of the rendering viewport. */
+
+/* Reduce layout shifts */
+.hero-bg,
+.service-card__image {
+    aspect-ratio: attr(width) / attr(height);
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Görsel boyut optimizasyonu */
+img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: auto;
+}
+
+/* WebP desteği için fallback */
+img[data-src] {
+    min-height: 200px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.dark img[data-src] {
+    background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+}
+body::before {
+    display: none !important;
+}
+.lang-loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    transition: opacity .3s ease-in;
+}
+
+.lang-loading-overlay .loading {
+    transform: scale(1.3);
+}

@@ -1,0 +1,279 @@
+/* ==========================================================================
+   Site footer — single source of truth.
+   A quiet, light footer that sits on the brand surface rather than a heavy
+   colored slab. All colors derive from the Global Panel theme variables.
+   ========================================================================== */
+
+.ftr {
+    /* --footer-ink & co. AppLayout tarafından zemin parlaklığına göre yazılır */
+    --ftr-ink: var(--footer-ink, var(--ui-text, #18211f));
+    --ftr-muted: var(
+        --footer-ink-muted,
+        var(--ui-muted, color-mix(in srgb, var(--ftr-ink) 62%, transparent))
+    );
+    --ftr-line: var(--footer-line, color-mix(in srgb, var(--ftr-ink) 11%, transparent));
+    --ftr-brand: var(--ui-primary, #176b5b);
+    --ftr-brand-ink: var(--footer-accent, var(--ftr-brand));
+    --ftr-soft: var(--footer-soft, color-mix(in srgb, var(--ftr-brand) 9%, transparent));
+
+    position: relative;
+    padding: clamp(52px, 6vw, 84px) 0 0;
+    /* Panelden gelen footer rengi (colors.footer_background_color) */
+    background: var(--footer-background-color, color-mix(in srgb, var(--ui-primary) 5%, var(--ui-bg) 95%));
+    border-top: 1px solid var(--ftr-line);
+    color: var(--ftr-ink);
+}
+
+html.dark .ftr {
+    --ftr-line: rgba(226, 232, 240, 0.13);
+    --ftr-brand-ink: color-mix(in srgb, var(--ftr-brand) 42%, #ffffff 58%);
+    --ftr-soft: color-mix(in srgb, var(--ftr-brand) 24%, transparent);
+    /* Panel rengini koyu zemine karıştır — header ile aynı mantık */
+    background: color-mix(
+        in srgb,
+        var(--footer-background-color, var(--ui-primary)) 12%,
+        var(--ui-bg, #070b12) 88%
+    );
+}
+
+/* a thin brand rule across the very top */
+.ftr::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--ftr-brand),
+        color-mix(in srgb, var(--ui-accent, var(--ftr-brand)) 60%, var(--ftr-brand) 40%),
+        transparent
+    );
+}
+
+/* =================================================================== grid */
+.ftr__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
+    gap: clamp(28px, 4vw, 56px);
+    padding-bottom: clamp(36px, 4vw, 56px);
+}
+
+/* ------------------------------------------------------------------ brand */
+.ftr__logo {
+    width: auto;
+    height: 56px;
+    max-width: 220px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.ftr__wordmark {
+    display: block;
+    color: var(--ui-h3, var(--ftr-ink));
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.ftr__description {
+    max-width: 42ch;
+    margin: 18px 0 0;
+    color: var(--ftr-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------- contact */
+.ftr__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ftr__contact a,
+.ftr__contact-static {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--ftr-ink);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.18s ease;
+}
+
+.ftr__contact a:hover {
+    color: var(--ftr-brand-ink);
+}
+
+.ftr__contact-static {
+    color: var(--ftr-muted);
+    font-weight: 500;
+}
+
+.ftr__contact-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: var(--ftr-soft);
+    color: var(--ftr-brand-ink);
+    font-size: 0.78rem;
+}
+
+/* --------------------------------------------------------------- columns */
+.ftr__heading {
+    margin: 0 0 16px;
+    color: var(--ui-h3, var(--ftr-ink));
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.ftr__links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ftr__links a {
+    display: inline-block;
+    color: var(--ftr-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition:
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.ftr__links a:hover {
+    color: var(--ftr-brand-ink);
+    transform: translateX(3px);
+}
+
+/* ---------------------------------------------------------------- social */
+.ftr__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ftr__social a {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--ftr-line);
+    border-radius: 11px;
+    color: var(--ftr-brand-ink);
+    font-size: 0.95rem;
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.ftr__social a:hover {
+    transform: translateY(-2px);
+    border-color: transparent;
+    background: var(--ftr-brand);
+    color: #fff;
+}
+
+/* ================================================================= bottom */
+.ftr__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 20px 0 24px;
+    border-top: 1px solid var(--ftr-line);
+    flex-wrap: wrap;
+}
+
+.ftr__copy {
+    margin: 0;
+    color: var(--ftr-muted);
+    font-size: 0.82rem;
+}
+
+.ftr__top {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 16px;
+    border: 1px solid var(--ftr-line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--ftr-ink);
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 650;
+    cursor: pointer;
+    transition:
+        border-color 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.ftr__top:hover {
+    border-color: color-mix(in srgb, var(--ftr-brand) 45%, transparent);
+    background: var(--ftr-soft);
+    color: var(--ftr-brand-ink);
+}
+
+.ftr__top svg {
+    font-size: 0.72rem;
+}
+
+.ftr a:focus-visible,
+.ftr button:focus-visible {
+    outline: 2px solid var(--ftr-brand);
+    outline-offset: 2px;
+}
+
+/* ============================================================= responsive */
+@media (max-width: 1024px) {
+    .ftr__grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 32px;
+    }
+    .ftr__brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .ftr__grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .ftr__logo {
+        height: 46px;
+    }
+    .ftr__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ftr__links a,
+    .ftr__social a,
+    .ftr__top {
+        transition: none !important;
+    }
+}

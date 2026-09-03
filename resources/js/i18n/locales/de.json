@@ -1,0 +1,219 @@
+{
+  "hero": {
+    "title": "Ihr zuverlässiger Partner für Beherbergung und Gebäudemanagement",
+    "subtitle": "Mit über 25 Jahren Erfahrung bieten wir maßgeschneiderte integrierte Lösungen für Reinigung, Wartung und Facility Management",
+    "button_services": "Unsere Services entdecken",
+    "button_contact": "Jetzt Kontakt aufnehmen"
+  },
+  "services": {
+    "section_title": "Unser breites Leistungsspektrum",
+    "section_subtitle": "Wir bieten schlüsselfertige Lösungen für alle Bedürfnisse Ihrer Anlagen und Gebäude – mit deutscher Gründlichkeit und Qualität.",
+    "learn_more": "Details erfahren",
+    "categories": {
+      "hotel": {
+        "title": "Hotelreinigung & Housekeeping",
+        "description": "Von der Zimmerreinigung bis zur Spülküche – makellose Hygiene und effiziente Prozesse in jedem Bereich Ihres Hotels."
+      },
+      "building": {
+        "title": "Professionelle Gebäudereinigung",
+        "description": "Büros, Gewerbeflächen, Bauendreinigung und Spezialreinigungen – wir bringen Ihre Immobilien zum Glänzen."
+      },
+      "renovation": {
+        "title": "Sanierung, Reparatur & Wartung",
+        "description": "Maler-, Putz- und Trockenbauarbeiten, Bodenverlegung und Kleinreparaturen."
+      }
+    },
+    "card": {
+      "aria": "Mehr Informationen über {{service}} erhalten",
+      "button": "Details"
+    }
+  },
+  "servicesList": {
+    "title": "Dienstleistungen",
+    "subtitle": "Entdecken Sie unsere umfassenden Dienstleistungen für Ihr Zuhause und Ihr Unternehmen",
+    "meta_title": "Unsere Dienstleistungen - O&I CLEAN group GmbH",
+    "meta_description": "Professionelle Reinigung, Sanierung und Gebäudemanagement.",
+    "loading": "Wird geladen…",
+    "contact_cta": "Kontaktieren Sie uns",
+    "contact_cta_aria": "Jetzt Kontakt aufnehmen",
+    "no_services": "Keine Dienstleistungen verfügbar."
+  },
+  "contact": {
+    "page_title": "Kontakt",
+    "intro_static_text": "Kostenlos und unverbindlich –",
+    "intro_dynamic_text": "wir melden uns schnellstmöglich bei Ihnen",
+    "title": "Kontaktieren Sie uns",
+    "description": "Professionelle Reinigungsdienstleistungen für Ihr Unternehmen. Wir beraten Sie gerne individuell.",
+    "submit_label": "Nachricht senden",
+    "submit_failed": "Nachricht konnte nicht gesendet werden.",
+    "select_placeholder": "Bitte auswählen",
+    "success_title": "Erfolgreich!",
+    "success_message": "Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.",
+    "redirecting": "Seite wird aktualisiert...",
+    "phone_label": "Telefon",
+    "submitting": "Wird gesendet…",
+    "success_sub": "Wir melden uns in Kürze bei Ihnen.",
+    "email_label": "E-Mail",
+    "hours_label": "Öffnungszeiten",
+    "hours_value": "Mo. - Fr.: 08:00 - 17:00 Uhr",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Name",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "other": "Branche"
+    },
+    "required": {
+      "name": "Name ist erforderlich.",
+      "phone": "Telefon ist erforderlich.",
+      "email": "E-Mail ist erforderlich.",
+      "message": "Nachricht ist erforderlich."
+    },
+    "error_generic": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "footer": {
+    "description": "Wir stehen Ihnen mit deutscher Gründlichkeit und Zuverlässigkeit in der professionellen Reinigung, Wartung und im Gebäudemanagement zur Seite.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Links",
+    "contact_title": "Kontakt",
+    "link_about": "Über uns",
+    "link_contact": "Kontakt",
+    "link_contact_href": "/kontakt",
+    "link_faq": "FAQ",
+    "link_privacy": "Datenschutz",
+    "link_imprint": "Impressum",
+    "link_privacy_bottom": "Datenschutz",
+    "copyright": "Alle Rechte vorbehalten.",
+    "back_to_top": "Zum Seitenanfang",
+    "region_label": "Footer und Kontaktinformationen",
+    "home_aria": "O&I CLEAN - Startseite",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Quicklinks",
+    "phone_aria": "Telefonnummer",
+    "email_aria": "E-Mail",
+    "services": "Leistungen"
+  },
+  "header": {
+    "topbar_tagline": "Reinigung, der Sie vertrauen können — 24/7 Service",
+    "cta_label": "Termin vereinbaren",
+    "cta_href": "/kontakt",
+    "hide_topbar": "Topbar ausblenden",
+    "home_aria": "Startseite",
+    "main_nav": "Hauptnavigation",
+    "menu_open": "Menü öffnen",
+    "menu_close": "Menü schließen",
+    "language": "Sprache",
+    "impressum": "Impressum",
+    "contact_button": "Kontakt"
+  },
+  "nav": {
+    "home": "Startseite"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Startseite",
+    "breadcrumbs_page": "Seite",
+    "empty_content": "Inhalt wird in Kürze hinzugefügt."
+  },
+  "offerDock": {
+    "title": "Angebot",
+    "subtitle": "Kostenlos & unverbindlich",
+    "button": "Anfordern",
+    "aria_open": "Angebotsleiste öffnen",
+    "aria_close": "Angebotsleiste schließen"
+  },
+  "quote_modal": {
+    "title": "Angebot anfordern",
+    "scrim_aria": "Modal schließen",
+    "close_aria": "Schließen",
+    "field_name": "Name",
+    "field_email": "E-Mail",
+    "field_phone": "Telefon",
+    "field_service": "Dienstleistung",
+    "field_message": "Nachricht",
+    "service_placeholder": "Bitte auswählen…",
+    "service_hotel_cleaning": "Hotelreinigung",
+    "service_building_cleaning": "Gebäudereinigung",
+    "service_window_cleaning": "Fensterreinigung",
+    "service_maintenance_cleaning": "Unterhaltsreinigung",
+    "service_basic_cleaning": "Grundreinigung",
+    "service_carpet_cleaning": "Teppichreinigung",
+    "service_other": "Sonstiges",
+    "service_general": "Allgemein",
+    "message_placeholder": "Was können wir für Sie tun?",
+    "consent_prefix": "Ich stimme der Verarbeitung meiner Daten gemäß der ",
+    "consent_link": "Datenschutzerklärung",
+    "consent_suffix": " zu.",
+    "cancel": "Abbrechen",
+    "submit": "Anfordern",
+    "sending": "Wird gesendet…",
+    "error_consent": "Bitte stimmen Sie der Datenverarbeitung zu.",
+    "error_generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "subject_prefix": "Angebotsanfrage",
+    "thank_you_title": "Vielen Dank!",
+    "thank_you_text": "Ihre Anfrage ist bei uns eingegangen, wir werden uns in Kürze bei Ihnen melden.",
+    "close_button": "Schließen"
+  },
+  "errors": {
+    "notFound": {
+      "404": "Seite wurde nicht gefunden oder existiert nicht mehr.",
+      "500": "Ein Serverfehler ist aufgetreten — bitte versuchen Sie es erneut.",
+      "home": "Zur Startseite",
+      "contact": "Kontakt",
+      "reload": "Neu laden"
+    }
+  },
+  "ui": {
+    "loading": {
+      "message": "Inhalt wird geladen…"
+    }
+  },
+  "cookies": {
+    "title": "Cookie-Einstellungen",
+    "message": "Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu ermöglichen.",
+    "cat_necessary": "Notwendige Cookies",
+    "cat_analytics": "Analyse-Cookies",
+    "cat_marketing": "Marketing-Cookies",
+    "desc_necessary": "Diese Cookies sind für den Betrieb der Website erforderlich.",
+    "desc_analytics": "Diese Cookies sammeln Informationen darüber, wie Sie unsere Website nutzen.",
+    "desc_marketing": "Diese Cookies werden verwendet, um Ihnen relevante Werbung anzuzeigen.",
+    "required": "Erforderlich",
+    "accept_all": "Alle akzeptieren",
+    "reject": "Ablehnen",
+    "save": "Auswahl speichern",
+    "settings": "Einstellungen",
+    "hide_details": "Details ausblenden",
+    "privacy_policy": "Datenschutzerklärung",
+    "imprint": "Impressum"
+  },
+  "common": {
+    "ok": "OK",
+    "demo": "Demo"
+  },
+  "required": {
+    "name": "Name ist erforderlich.",
+    "phone": "Telefon ist erforderlich.",
+    "email": "E-Mail ist erforderlich.",
+    "message": "Nachricht ist erforderlich."
+  },
+  "submit_error": "Fehler! Bitte erneut versuchen.",
+  "reviews": {
+    "title": "Das sagen unsere Kunden",
+    "subtitle": "Echte Rückmeldungen aus Hotels, Büros und Objekten, die wir täglich betreuen.",
+    "eyebrow": "Kundenstimmen",
+    "rating_label": "Bewertung",
+    "count": "{{count}} Bewertungen",
+    "anonymous": "Kunde"
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "subtitle": "Die Antworten, nach denen am häufigsten gefragt wird. Ihre Frage ist nicht dabei? Melden Sie sich einfach.",
+    "eyebrow": "FAQ"
+  }
+}

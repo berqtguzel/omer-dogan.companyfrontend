@@ -1,0 +1,177 @@
+{
+  "hero": {
+    "title": "Vaš pouzdan partner u smještaju i upravljanju objektima",
+    "subtitle": "S više od 25 godina iskustva, nudimo prilagođena integrirana rješenja za čišćenje, održavanje i upravljanje objektima",
+    "button_services": "Otkrijte naše usluge",
+    "button_contact": "Kontaktirajte nas"
+  },
+  "services": {
+    "section_title": "Naš široki spektar usluga",
+    "section_subtitle": "Pružamo rješenja 'ključ u ruke' za sve potrebe vaših objekata i zgrada – uz njemačku preciznost i kvalitetu.",
+    "learn_more": "Detaljne informacije",
+    "categories": {
+      "hotel": {
+        "title": "Čišćenje hotela i housekeeping",
+        "description": "Od čišćenja soba do praonice posuđa – besprijekorna higijena i učinkoviti procesi u svakom dijelu vašeg hotela."
+      },
+      "building": {
+        "title": "Profesionalno čišćenje zgrada",
+        "description": "Uredi, komercijalni prostori, čišćenje nakon izgradnje i posebna čišćenja – činimo da vaše nekretnine zablistaju."
+      },
+      "renovation": {
+        "title": "Renoviranje, popravak i održavanje",
+        "description": "Bojanje, gipsarski radovi, podopolagački radovi i mali popravci."
+      }
+    },
+    "card": {
+      "aria": "Saznajte više o {{service}}",
+      "button": "Detalji"
+    }
+  },
+  "servicesList": {
+    "title": "Usluge",
+    "subtitle": "Otkrijte naše sveobuhvatne usluge za vaš dom i posao",
+    "meta_title": "Naše usluge - O&I CLEAN group GmbH",
+    "meta_description": "Profesionalno čišćenje, renoviranje i upravljanje objektima.",
+    "loading": "Učitavanje…",
+    "contact_cta": "Kontaktirajte nas",
+    "contact_cta_aria": "Kontaktirajte nas odmah"
+  },
+  "contact": {
+    "page_title": "Kontakt",
+    "intro_static_text": "Besplatno i neobvezujuće –",
+    "intro_dynamic_text": "javit ćemo vam se u najkraćem mogućem roku",
+    "title": "Kontaktirajte nas",
+    "description": "Profesionalne usluge čišćenja za vašu tvrtku. Rado ćemo vas informirati individualno.",
+    "submit_label": "Pošalji poruku",
+    "submit_failed": "Poruka se nije mogla poslati.",
+    "select_placeholder": "Molimo odaberite",
+    "success_title": "Uspjeh!",
+    "success_message": "Vaša poruka je uspješno poslana. Kontaktirat ćemo vas uskoro.",
+    "redirecting": "Stranica se ponovno učitava...",
+    "phone_label": "Telefon",
+    "submitting": "Slanje...",
+    "success_sub": "Javit ćemo vam se uskoro.",
+    "email_label": "E-pošta",
+    "hours_label": "Radno vrijeme",
+    "hours_value": "Pon. - Pet.: 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Ime",
+      "phone": "Telefon",
+      "email": "E-pošta",
+      "message": "Poruka",
+      "other": "Polje"
+    },
+    "required": {
+      "name": "Ime je obavezno.",
+      "phone": "Telefon je obavezan.",
+      "email": "E-pošta je obavezna.",
+      "message": "Poruka je obavezna."
+    },
+    "error_generic": "Dogodila se pogreška. Molimo pokušajte ponovno."
+  },
+  "footer": {
+    "description": "Stojimo uz vas s njemačkom temeljitošću i pouzdanošću u profesionalnom čišćenju, održavanju i upravljanju objektima.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Linkovi",
+    "contact_title": "Kontakt",
+    "link_about": "O nama",
+    "link_contact": "Kontakt",
+    "link_contact_href": "/contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Privatnost",
+    "link_imprint": "Impresum",
+    "link_privacy_bottom": "Privatnost",
+    "copyright": "Sva prava pridržana.",
+    "back_to_top": "Povratak na vrh",
+    "region_label": "Podnožje i kontakt informacije",
+    "home_aria": "O&I CLEAN - Početna stranica",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Brzi linkovi",
+    "phone_aria": "Broj telefona",
+    "email_aria": "E-pošta"
+  },
+  "header": {
+    "topbar_tagline": "Čišćenje kojem možete vjerovati — 24/7 usluga",
+    "cta_label": "Dogovorite termin",
+    "cta_href": "/contact",
+    "hide_topbar": "Sakrij gornju traku",
+    "home_aria": "Početna stranica",
+    "main_nav": "Glavna navigacija",
+    "menu_open": "Otvori izbornik",
+    "menu_close": "Zatvori izbornik",
+    "language": "Jezik",
+    "impressum": "Impresum",
+    "contact_button": "Kontakt"
+  },
+  "nav": {
+    "home": "Početna"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Početna",
+    "breadcrumbs_page": "Stranica",
+    "empty_content": "Sadržaj će biti dodan uskoro."
+  },
+  "offerDock": {
+    "title": "Ponuda",
+    "subtitle": "Besplatno i neobvezujuće",
+    "button": "Zatraži",
+    "aria_open": "Otvori ploču s ponudama",
+    "aria_close": "Zatvori ploču s ponudama"
+  },
+  "quote_modal": {
+    "title": "Zatražite ponudu",
+    "scrim_aria": "Zatvori modal",
+    "close_aria": "Zatvori",
+    "field_name": "Ime",
+    "field_email": "E-pošta",
+    "field_phone": "Telefon",
+    "field_service": "Usluga",
+    "field_message": "Poruka",
+    "service_placeholder": "Molimo odaberite…",
+    "service_hotel_cleaning": "Čišćenje hotela",
+    "service_building_cleaning": "Čišćenje zgrada",
+    "service_window_cleaning": "Pranje prozora",
+    "service_maintenance_cleaning": "Redovito održavanje",
+    "service_basic_cleaning": "Generalno čišćenje",
+    "service_carpet_cleaning": "Čišćenje tepiha",
+    "service_other": "Ostalo",
+    "service_general": "Općenito",
+    "message_placeholder": "Što možemo učiniti za vas?",
+    "consent_prefix": "Slažem se s obradom mojih podataka u skladu s ",
+    "consent_link": "pravilima o privatnosti",
+    "consent_suffix": ".",
+    "cancel": "Otkaži",
+    "submit": "Zatraži",
+    "sending": "Slanje…",
+    "error_consent": "Molimo dajte suglasnost za obradu podataka.",
+    "error_generic": "Nešto je pošlo po zlu. Molimo pokušajte ponovno.",
+    "subject_prefix": "Zahtjev za ponudu",
+    "thank_you_title": "Hvala vam!",
+    "thank_you_text": "Vaš zahtjev je zaprimljen, kontaktirat ćemo vas uskoro.",
+    "close_button": "Zatvori"
+  },
+  "cookies": {
+    "title": "Postavke kolačića",
+    "message": "Koristimo kolačiće kako bismo vam osigurali najbolje iskustvo na našoj web stranici.",
+    "accept_all": "Prihvati sve",
+    "reject": "Odbij",
+    "save": "Spremi odabir",
+    "privacy_policy": "Pravila o privatnosti",
+    "imprint": "Impresum"
+  },
+  "required": {
+    "name": "Ime je obavezno.",
+    "phone": "Telefon je obavezan.",
+    "email": "E-pošta je obavezna.",
+    "message": "Poruka je obavezna."
+  },
+  "submit_error": "Pogreška! Molimo pokušajte ponovno."
+}

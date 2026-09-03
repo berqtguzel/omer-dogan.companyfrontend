@@ -1,0 +1,68 @@
+/*
+ * Panel renkleri için başlangıç değerleri.
+ *
+ * Gerçek değerleri AppLayout, `colors` objesindeki her anahtarı
+ * `--<anahtar-tire-li>` olarak documentElement.style'a yazarak veriyor;
+ * inline stil bu bloğu ezer. Buradaki değerler yalnızca SSR / ilk boyama
+ * ve API'nin göndermediği anahtarlar için geçerli (bkz. ColorHelper).
+ *
+ * Not: bu blok eskiden `--x: var(--x)` biçiminde kendine referans veren
+ * (dolayısıyla geçersiz) tanımlardan oluşuyordu; `--site-accent-colo`
+ * yazım hatası ve `--header_background_color` alt tireli adı da buradaydı.
+ */
+:root{
+  --site-primary-color: #007bff;
+  --site-secondary-color: #6c757d;
+  --site-accent-color: #22d3ee;
+  --button-color: #007bff;
+  --link-color: #2563eb;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --header-background-color: #ffffff;
+  --footer-background-color: #f8f9fa;
+  --h1-color: #111111;
+  --h2-color: #333333;
+  --h3-color: #555555;
+}
+
+
+body{
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+
+h1,.h1{ color: var(--h1-color); }
+h2,.h2{ color: var(--h2-color); }
+h3,.h3{ color: var(--h3-color); }
+
+
+a{ color: var(--link-color); }
+a:hover{ color: color-mix(in srgb, var(--link-color) 78%, #000 22%); }
+
+
+.btn-primary,
+.btn--primary,
+button[type="submit"]{
+  background: var(--button-color);
+  color:#fff;
+  border-color: color-mix(in srgb, var(--button-color) 30%, #fff 70%);
+}
+.btn-primary:hover,
+.btn--primary:hover,
+button[type="submit"]:hover{
+  filter: brightness(0.95);
+}
+
+
+/* Eskiden header.css'te sabit mavi (#1d4ed8) olarak tanımlıydı; header
+   sıfırdan yazılırken buraya taşındı ve panel rengine bağlandı.
+   Kullananlar: ContactSection gönder butonu, OfferDock CTA. */
+.bg-button{ background: var(--button-color) !important; color:#fff !important; }
+.bg-button:hover{ filter: brightness(0.95); color:#fff !important; }
+
+.bg-white{ background: var(--background-color) !important; }
+.text-primary{ color: var(--site-primary-color) !important; }
+.bg-primary{ background: var(--site-primary-color) !important; color:#fff!important; }
+
+

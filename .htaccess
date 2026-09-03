@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Eğer istek zaten /public ile başlıyorsa dokunma
+    RewriteRule ^public/ - [L]
+
+    # Root isteği /public'e yönlendir
+    RewriteRule ^$ public/ [L]
+
+    # Var olan dosya/klasör public içinde varsa oraya yönlendir
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -d
+    RewriteRule ^(.+)$ public/$1 [L]
+
+    # Diğer tüm istekleri Laravel public/index.php'ye gönder
+    RewriteRule ^(.+)$ public/index.php [L]
+</IfModule>

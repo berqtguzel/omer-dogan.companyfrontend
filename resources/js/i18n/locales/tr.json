@@ -1,0 +1,218 @@
+{
+  "hero": {
+    "title": "Konaklama ve bina yönetiminde güvenilir iş ortağınız",
+    "subtitle": "25 yılı aşkın deneyimimizle temizlik, bakım ve tesis yönetimi için ihtiyaca özel entegre çözümler sunuyoruz",
+    "button_services": "Hizmetlerimizi keşfedin",
+    "button_contact": "Hemen iletişime geçin"
+  },
+  "services": {
+    "section_title": "Geniş hizmet yelpazemiz",
+    "section_subtitle": "Tesisleriniz ve binalarınızın tüm ihtiyaçları için anahtar teslim çözümler sunuyoruz – Alman titizliği ve kalitesiyle.",
+    "learn_more": "Detaylı bilgi",
+    "categories": {
+      "hotel": {
+        "title": "Otel temizliği & housekeeping",
+        "description": "Oda temizliğinden bulaşıkhaneye kadar – otelinizin her alanında kusursuz hijyen ve verimli süreçler."
+      },
+      "building": {
+        "title": "Profesyonel bina temizliği",
+        "description": "Ofisler, ticari alanlar, inşaat sonu temizlik ve özel temizlikler – mülklerinizi parlatıyoruz."
+      },
+      "renovation": {
+        "title": "Tadilat, onarım & bakım",
+        "description": "Boyama, alçı ve alçıpan işleri, zemin döşeme ve küçük onarımlar."
+      }
+    },
+    "card": {
+      "aria": "{{service}} hakkında daha fazla bilgi al",
+      "button": "Detaylar"
+    }
+  },
+  "servicesList": {
+    "title": "Hizmetler",
+    "subtitle": "Eviniz ve işiniz için sunduğumuz kapsamlı hizmetleri keşfedin",
+    "meta_title": "Hizmetlerimiz - O&I CLEAN group GmbH",
+    "meta_description": "Profesyonel temizlik, tadilat ve bina yönetimi.",
+    "loading": "Yükleniyor…",
+    "contact_cta": "Bizimle iletişime geçin",
+    "contact_cta_aria": "Hemen iletişime geçin"
+  },
+  "contact": {
+    "page_title": "İletişim",
+    "intro_static_text": "Ücretsiz ve bağlayıcı değildir –",
+    "intro_dynamic_text": "en kısa sürede size dönüş yapacağız",
+    "title": "Bizimle iletişime geçin",
+    "description": "Şirketiniz için profesyonel temizlik hizmetleri. Sizi memnuniyetle bireysel olarak bilgilendiririz.",
+    "submit_label": "Mesaj gönder",
+    "submit_failed": "Mesaj gönderilemedi.",
+    "select_placeholder": "Lütfen seçin",
+    "success_title": "Başarılı!",
+    "success_message": "Mesajınız başarıyla gönderildi. En kısa sürede size geri dönüş yapacağız.",
+    "redirecting": "Sayfa yenileniyor...",
+    "phone_label": "Telefon",
+    "submitting": "Gönderiliyor...",
+    "success_sub": "Size en kısa sürede geri dönüş yapacağız.",
+    "email_label": "E-posta",
+    "hours_label": "Çalışma saatleri",
+    "hours_value": "Pzt. - Cum.: 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "İsim",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "message": "Mesaj",
+      "other": "Alan"
+    },
+    "error_generic": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "required": {
+      "name": "İsim gerekli.",
+      "phone": "Telefon gerekli.",
+      "email": "E-posta gerekli.",
+      "message": "Mesaj gerekli."
+    }
+  },
+  "footer": {
+    "description": "Profesyonel temizlik, bakım ve bina yönetiminde Alman titizliği ve güvenilirliğiyle yanınızdayız.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Bağlantılar",
+    "contact_title": "İletişim",
+    "link_about": "Hakkımızda",
+    "link_contact": "İletişim",
+    "link_contact_href": "/contact",
+    "link_faq": "SSS",
+    "link_privacy": "Gizlilik",
+    "link_imprint": "İmpressum",
+    "link_privacy_bottom": "Gizlilik",
+    "copyright": "Tüm hakları saklıdır.",
+    "back_to_top": "Başa dön",
+    "region_label": "Alt bilgi ve iletişim bilgileri",
+    "home_aria": "O&I CLEAN - Ana sayfa",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Hızlı bağlantılar",
+    "phone_aria": "Telefon numarası",
+    "email_aria": "E-posta",
+    "services": "Hizmetler"
+  },
+  "header": {
+    "topbar_tagline": "Güvenebileceğiniz temizlik — 7/24 hizmet",
+    "cta_label": "Randevu al",
+    "cta_href": "/kontakt",
+    "hide_topbar": "Üst barı gizle",
+    "home_aria": "Ana sayfa",
+    "main_nav": "Ana navigasyon",
+    "menu_open": "Menüyü aç",
+    "menu_close": "Menüyü kapat",
+    "language": "Dil",
+    "impressum": "Damga",
+    "contact_button": "İletişim"
+  },
+  "nav": {
+    "home": "Ana sayfa"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Ana sayfa",
+    "breadcrumbs_page": "Sayfa",
+    "empty_content": "İçerik yakında eklenecek."
+  },
+  "offerDock": {
+    "title": "Teklif",
+    "subtitle": "Ücretsiz & bağlayıcı değil",
+    "button": "Talep et",
+    "aria_open": "Teklif panelini aç",
+    "aria_close": "Teklif panelini kapat"
+  },
+  "quote_modal": {
+    "title": "Teklif talep et",
+    "scrim_aria": "Modalı kapat",
+    "close_aria": "Kapat",
+    "field_name": "İsim",
+    "field_email": "E-posta",
+    "field_phone": "Telefon",
+    "field_service": "Hizmet",
+    "field_message": "Mesaj",
+    "service_placeholder": "Lütfen seçin…",
+    "service_hotel_cleaning": "Otel temizliği",
+    "service_building_cleaning": "Bina temizliği",
+    "service_window_cleaning": "Cam/pencere temizliği",
+    "service_maintenance_cleaning": "Sürekli temizlik",
+    "service_basic_cleaning": "Genel/derin temizlik",
+    "service_carpet_cleaning": "Halı temizliği",
+    "service_other": "Diğer",
+    "service_general": "Genel",
+    "message_placeholder": "Sizin için ne yapabiliriz?",
+    "consent_prefix": "Verilerimin işlenmesini ",
+    "consent_link": "gizlilik bildirimine",
+    "consent_suffix": " uygun olarak kabul ediyorum.",
+    "cancel": "İptal",
+    "submit": "Talep et",
+    "sending": "Gönderiliyor…",
+    "error_consent": "Lütfen veri işleme onayını verin.",
+    "error_generic": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "subject_prefix": "Teklif talebi",
+    "thank_you_title": "Teşekkürler!",
+    "thank_you_text": "Talebiniz bize ulaştı, en kısa sürede sizinle iletişime geçeceğiz.",
+    "close_button": "Kapat"
+  },
+  "errors": {
+    "notFound": {
+      "404": "Aradığınız sayfa bulunamadı.",
+      "500": "Sunucu hatası oluştu — lütfen tekrar deneyin.",
+      "home": "Ana Sayfaya Dön",
+      "contact": "İletişime Geç",
+      "reload": "Sayfayı Yenile"
+    }
+  },
+  "ui": {
+    "loading": {
+      "message": "İçerik yükleniyor…"
+    }
+  },
+  "cookies": {
+    "title": "Çerez Tercihleri",
+    "message": "Web sitemizde en iyi deneyimi yaşamanız için çerezleri kullanıyoruz.",
+    "cat_necessary": "Zorunlu Çerezler",
+    "cat_analytics": "Analiz Çerezleri",
+    "cat_marketing": "Pazarlama Çerezleri",
+    "desc_necessary": "Bu çerezler web sitesinin çalışması için gereklidir.",
+    "desc_analytics": "Bu çerezler sitemizi nasıl kullandığınız hakkında bilgi toplar.",
+    "desc_marketing": "Bu çerezler size uygun reklamlar göstermek için kullanılır.",
+    "required": "Zorunlu",
+    "accept_all": "Tümünü Kabul Et",
+    "reject": "Reddet",
+    "save": "Seçimi Kaydet",
+    "settings": "Tercihler",
+    "hide_details": "Gizle",
+    "privacy_policy": "Gizlilik Politikası",
+    "imprint": "Künye"
+  },
+  "common": {
+    "ok": "Tamam",
+    "demo": "Demo"
+  },
+  "required": {
+    "name": "İsim gerekli.",
+    "phone": "Telefon gerekli.",
+    "email": "E-posta gerekli.",
+    "message": "Mesaj gerekli."
+  },
+  "submit_error": "Hata! Lütfen tekrar deneyin.",
+  "reviews": {
+    "title": "Müşterilerimiz ne diyor",
+    "subtitle": "Her gün hizmet verdiğimiz oteller, ofisler ve tesislerden gerçek geri bildirimler.",
+    "eyebrow": "Müşteri yorumları",
+    "rating_label": "Puan",
+    "count": "{{count}} değerlendirme",
+    "anonymous": "Müşteri"
+  },
+  "faq": {
+    "title": "Sıkça sorulan sorular",
+    "subtitle": "En çok merak edilenlerin yanıtları. Sorunuz burada yoksa bize ulaşmanız yeterli.",
+    "eyebrow": "SSS"
+  }
+}

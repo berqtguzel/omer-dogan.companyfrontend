@@ -1,0 +1,218 @@
+:root {
+    --odock-bg: rgba(255, 255, 255, 0.66);
+    --odock-bg-blur: 12px;
+    --odock-border: rgba(15, 23, 42, 0.1);
+    --odock-text: #0f172a;
+    --odock-sub: rgba(15, 23, 42, 0.7);
+    --odock-cta-bg: #2457ff;
+    --odock-cta-text: #fff;
+    --odock-cta-bg-hover: #1f49e6;
+    --odock-shadow: 0 18px 40px -12px rgba(15, 23, 42, 0.18);
+    --odock-tab-bg: #2457ff;
+    --odock-focus: 0 0 0 3px rgba(36, 95, 255, 0.35);
+}
+
+.dark {
+    --odock-bg: rgba(36, 95, 255, 0.9);
+    --odock-bg-blur: 8px;
+    --odock-border: rgba(255, 255, 255, 0.22);
+    --odock-text: #fff;
+    --odock-sub: rgba(255, 255, 255, 0.85);
+    --odock-cta-bg: #ffffff;
+    --odock-cta-text: #2457ff;
+    --odock-cta-bg-hover: #f5f7ff;
+    --odock-shadow: 0 18px 40px -12px rgba(20, 50, 120, 0.35);
+    --odock-tab-bg: rgba(22, 85, 240, 0.95);
+    --odock-focus: 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+.odock {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 60;
+    pointer-events: none;
+}
+
+.odock__panel {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateX(var(--panel-x, 0px)) translateY(-50%);
+    width: var(--panel-w, 280px);
+    height: 92px;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        color-mix(in oklab, var(--odock-bg), transparent 0%) 0%,
+        color-mix(in oklab, var(--odock-bg), transparent 10%) 100%
+    );
+    backdrop-filter: blur(var(--odock-bg-blur));
+    -webkit-backdrop-filter: blur(var(--odock-bg-blur));
+    background-clip: padding-box;
+    border: 1px solid var(--odock-border);
+    border-right-color: transparent;
+    box-shadow: var(--odock-shadow);
+    transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.odock__body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px calc(16px + var(--tab-w, 40px)) 14px 18px;
+    color: var(--odock-text);
+}
+
+.odock__title {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 1.1;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.odock__sub {
+    font-size: 12.5px;
+    margin-top: 2px;
+    color: var(--odock-sub);
+    line-height: 1.25;
+}
+
+.odock__body > .odock__group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 6px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.odock__cta {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: #1d4ed8;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 999px;
+    letter-spacing: 0.2px;
+    box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.18);
+    transition:
+        background 0.2s ease,
+        transform 0.06s ease,
+        filter 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    max-width: 100%; /* güvenlik için */
+}
+.odock__cta:hover {
+    background: #1e40af;
+    color: #ffffff;
+    filter: brightness(1.03);
+}
+.odock__cta:active {
+    transform: translateY(1px);
+}
+.odock__cta:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    box-shadow: var(--odock-focus);
+}
+
+.odock__tab {
+    --tab-w: 40px;
+    position: absolute;
+    top: 50%;
+    left: calc(var(--panel-w) + var(--panel-x) - var(--tab-w));
+    transform: translateY(-50%);
+    width: var(--tab-w);
+    height: 84px;
+    border: 0;
+    outline: 0;
+    background: var(--odock-tab-bg);
+    color: #fff;
+    border-radius: 14px;
+    box-shadow: var(--odock-shadow);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition:
+        left 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.odock__tab:hover {
+    background: #134fe6;
+}
+.odock__tab:active {
+    transform: translateY(-50%) scale(0.98);
+}
+.odock__tab:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    box-shadow: var(--odock-focus);
+}
+
+/* MOBİL – dar ekranda stack + height:auto */
+@media (max-width: 640px) {
+    .odock__panel {
+        height: auto;
+    }
+
+    .odock__body {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 14px 10px 16px;
+    }
+
+    .odock__title {
+        font-size: 13px;
+    }
+
+    .odock__sub {
+        font-size: 12px;
+    }
+
+    .odock__cta {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 9px 12px;
+        white-space: normal;
+    }
+
+    .odock__tab {
+        height: 80px;
+    }
+}
+
+/* KAPALI DURUM – sadece mavi tab görünsün */
+.odock--collapsed {
+    /* paneli tamamen sola it */
+    --panel-x: calc(-1 * var(--panel-w)) !important;
+}
+
+/* panel ekran dışında, görünmesin */
+.odock--collapsed .odock__panel {
+    border-color: transparent;
+    box-shadow: none;
+    background: transparent;
+}
+
+/* tab’ı tam sol kenara getir (sadece mavi kısım) */
+.odock--collapsed .odock__tab {
+    left: 0 !important;
+}

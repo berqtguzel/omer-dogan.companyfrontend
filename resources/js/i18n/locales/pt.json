@@ -1,0 +1,174 @@
+{
+  "hero": {
+    "title": "Seu parceiro confiável em hospedagem e gestão de instalações",
+    "subtitle": "Com mais de 25 anos de experiência, oferecemos soluções integradas sob medida para limpeza, manutenção e gestão de instalações.",
+    "button_services": "Descubra nossos serviços",
+    "button_contact": "Contate-nos agora"
+  },
+  "services": {
+    "section_title": "Nossa ampla gama de serviços",
+    "section_subtitle": "Fornecemos soluções completas para todas as necessidades das suas instalações e edifícios – com precisão e qualidade alemãs.",
+    "learn_more": "Informações detalhadas",
+    "categories": {
+      "hotel": {
+        "title": "Limpeza de hotéis e housekeeping",
+        "description": "Da limpeza dos quartos à área de lavagem – higiene impecável e processos eficientes em todas as áreas do seu hotel."
+      },
+      "building": {
+        "title": "Limpeza profissional de edifícios",
+        "description": "Escritórios, áreas comerciais, limpeza pós-obra e limpezas especiais – fazemos as suas propriedades brilharem."
+      },
+      "renovation": {
+        "title": "Renovação, reparação e manutenção",
+        "description": "Pintura, trabalhos em gesso, pisos e pequenas reparações."
+      }
+    },
+    "card": {
+      "aria": "Obter mais informações sobre {{service}}",
+      "button": "Detalhes"
+    }
+  },
+  "servicesList": {
+    "title": "Serviços",
+    "subtitle": "Descubra nossos serviços abrangentes para sua casa e empresa",
+    "meta_title": "Nossos Serviços - O&I CLEAN group GmbH",
+    "meta_description": "Limpeza profissional, renovação e gestão de instalações.",
+    "loading": "Carregando…",
+    "contact_cta": "Contate-nos",
+    "contact_cta_aria": "Contate-nos agora"
+  },
+  "contact": {
+    "page_title": "Contato",
+    "intro_static_text": "Gratuito e sem compromisso –",
+    "intro_dynamic_text": "retornaremos o mais breve possível",
+    "title": "Contate-nos",
+    "description": "Serviços de limpeza profissional para sua empresa. Temos prazer em informá-lo individualmente.",
+    "submit_label": "Enviar mensagem",
+    "submit_failed": "Não foi possível enviar a mensagem.",
+    "select_placeholder": "Por favor selecione",
+    "success_title": "Sucesso!",
+    "success_message": "Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.",
+    "redirecting": "A página está recarregando...",
+    "phone_label": "Telefone",
+    "submitting": "Enviando...",
+    "success_sub": "Entraremos em contato em breve.",
+    "email_label": "E-mail",
+    "hours_label": "Horário de funcionamento",
+    "hours_value": "Seg. - Sex.: 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Nome",
+      "phone": "Telefone",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "other": "Campo"
+    },
+    "required": {
+      "name": "Nome é obrigatório.",
+      "phone": "Telefone é obrigatório.",
+      "email": "E-mail é obrigatório.",
+      "message": "Mensagem é obrigatória."
+    },
+    "error_generic": "Ocorreu um erro. Por favor, tente novamente."
+  },
+  "footer": {
+    "description": "Estamos ao seu lado com o rigor e a confiabilidade alemães em limpeza profissional, manutenção e gestão de instalações.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Links",
+    "contact_title": "Contato",
+    "link_about": "Sobre nós",
+    "link_contact": "Contato",
+    "link_contact_href": "/contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Privacidade",
+    "link_imprint": "Aviso legal",
+    "link_privacy_bottom": "Privacidade",
+    "copyright": "Todos os direitos reservados.",
+    "back_to_top": "Voltar ao topo",
+    "region_label": "Rodapé e informações de contato",
+    "home_aria": "O&I CLEAN - Início",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Links rápidos",
+    "phone_aria": "Número de telefone",
+    "email_aria": "E-mail"
+  },
+  "header": {
+    "topbar_tagline": "Limpeza em que você pode confiar — Serviço 24/7",
+    "cta_label": "Marcar um horário",
+    "cta_href": "/contact",
+    "hide_topbar": "Ocultar barra superior",
+    "home_aria": "Página inicial",
+    "main_nav": "Navegação principal",
+    "menu_open": "Abrir menu",
+    "menu_close": "Fechar menu",
+    "language": "Idioma",
+    "impressum": "Aviso legal",
+    "contact_button": "Contato"
+  },
+  "nav": {
+    "home": "Início"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Início",
+    "breadcrumbs_page": "Página",
+    "empty_content": "O conteúdo será adicionado em breve."
+  },
+  "offerDock": {
+    "title": "Oferta",
+    "subtitle": "Grátis e sem compromisso",
+    "button": "Solicitar",
+    "aria_open": "Abrir painel de oferta",
+    "aria_close": "Fechar painel de oferta"
+  },
+  "quote_modal": {
+    "title": "Solicitar orçamento",
+    "scrim_aria": "Fechar modal",
+    "close_aria": "Fechar",
+    "field_name": "Nome",
+    "field_email": "E-mail",
+    "field_phone": "Telefone",
+    "field_service": "Serviço",
+    "field_message": "Mensagem",
+    "service_placeholder": "Por favor selecione…",
+    "service_hotel_cleaning": "Limpeza de hotéis",
+    "service_building_cleaning": "Limpeza de edifícios",
+    "service_window_cleaning": "Limpeza de janelas",
+    "service_maintenance_cleaning": "Limpeza de manutenção",
+    "service_basic_cleaning": "Limpeza geral/profunda",
+    "service_carpet_cleaning": "Limpeza de carpetes",
+    "service_other": "Outro",
+    "service_general": "Geral",
+    "message_placeholder": "O que podemos fazer por você?",
+    "consent_prefix": "Concordo com o processamento dos meus dados de acordo com a ",
+    "consent_link": "política de privacidade",
+    "consent_suffix": ".",
+    "cancel": "Cancelar",
+    "submit": "Solicitar",
+    "sending": "Enviando…",
+    "error_consent": "Por favor, forneça o consentimento para o processamento de dados.",
+    "error_generic": "Algo deu errado. Por favor, tente novamente.",
+    "subject_prefix": "Solicitação de orçamento",
+    "thank_you_title": "Obrigado!",
+    "thank_you_text": "Seu pedido foi recebido, entraremos em contato em breve.",
+    "close_button": "Fechar"
+  },
+  "cookies": {
+    "title": "Preferências de Cookies",
+    "message": "Usamos cookies para garantir que você tenha a melhor experiência.",
+    "accept_all": "Aceitar tudo",
+    "reject": "Rejeitar",
+    "save": "Salvar seleção"
+  },
+  "required": {
+    "name": "Nome é obrigatório.",
+    "phone": "Telefone é obrigatório.",
+    "email": "E-mail é obrigatório.",
+    "message": "Mensagem é obrigatória."
+  }
+}

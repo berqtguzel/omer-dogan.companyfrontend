@@ -1,0 +1,32 @@
+﻿{
+  "name": "oi-clean",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@inertiajs/react": "^1.2.0",
+    "axios": "^1.7.4",
+    "framer-motion": "^11.0.0",
+    "lodash": "^4.17.21",
+    "motion": "^11.5.2",
+    "ogl": "^0.0.107",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-lazy-load-image-component": "^1.6.3",
+    "react-simple-maps": "^3.0.0",
+    "three": "^0.165.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "laravel-vite-plugin": "^1.0.5",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.0"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "hero": {
+    "title": "Ваш надежный партнер в сфере размещения и управления объектами",
+    "subtitle": "Обладая более чем 25-летним опытом, мы предлагаем индивидуальные комплексные решения для уборки, технического обслуживания и управления объектами.",
+    "button_services": "Наши услуги",
+    "button_contact": "Связаться с нами"
+  },
+  "services": {
+    "section_title": "Наш широкий спектр услуг",
+    "section_subtitle": "Мы предлагаем решения «под ключ» для всех нужд ваших объектов и зданий – с немецкой точностью и качеством.",
+    "learn_more": "Подробная информация",
+    "categories": {
+      "hotel": {
+        "title": "Уборка отелей и гостиничный сервис",
+        "description": "От уборки номеров до мойки посуды – безупречная гигиена и эффективные процессы в каждой зоне вашего отеля."
+      },
+      "building": {
+        "title": "Профессиональная уборка зданий",
+        "description": "Офисы, коммерческие площади, послестроительная уборка и специальные виды клининга – мы заставим вашу недвижимость сиять."
+      },
+      "renovation": {
+        "title": "Ремонт и техническое обслуживание",
+        "description": "Малярные работы, гипсокартон, напольные покрытия и мелкий ремонт."
+      }
+    },
+    "card": {
+      "aria": "Получить больше информации о {{service}}",
+      "button": "Подробнее"
+    }
+  },
+  "servicesList": {
+    "title": "Услуги",
+    "subtitle": "Откройте для себя наши комплексные услуги для дома и бизнеса",
+    "meta_title": "Наши услуги - O&I CLEAN group GmbH",
+    "meta_description": "Профессиональная уборка, ремонт и управление объектами.",
+    "loading": "Загрузка…",
+    "contact_cta": "Связаться с нами",
+    "contact_cta_aria": "Связаться с нами сейчас"
+  },
+  "contact": {
+    "page_title": "Контакты",
+    "intro_static_text": "Бесплатно и без обязательств –",
+    "intro_dynamic_text": "мы ответим вам как можно скорее",
+    "title": "Связаться с нами",
+    "description": "Профессиональные клининговые услуги для вашей компании. Мы будем рады проконсультировать вас индивидуально.",
+    "submit_label": "Отправить сообщение",
+    "submit_failed": "Не удалось отправить сообщение.",
+    "select_placeholder": "Пожалуйста, выберите",
+    "success_title": "Успех!",
+    "success_message": "Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.",
+    "redirecting": "Страница перезагружается...",
+    "phone_label": "Телефон",
+    "submitting": "Отправка...",
+    "success_sub": "Мы скоро с вами свяжемся.",
+    "email_label": "Email",
+    "hours_label": "Часы работы",
+    "hours_value": "Пн. - Пт.: 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Имя",
+      "phone": "Телефон",
+      "email": "Email",
+      "message": "Сообщение",
+      "other": "Поле"
+    },
+    "required": {
+      "name": "Имя обязательно.",
+      "phone": "Телефон обязателен.",
+      "email": "Email обязателен.",
+      "message": "Сообщение обязательно."
+    },
+    "error_generic": "Произошла ошибка. Пожалуйста, попробуйте еще раз."
+  },
+  "footer": {
+    "description": "Мы обеспечиваем немецкую тщательность и надежность в профессиональной уборке и управлении объектами.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Ссылки",
+    "contact_title": "Контакт",
+    "link_about": "О нас",
+    "link_contact": "Контакт",
+    "link_contact_href": "/contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Конфиденциальность",
+    "link_imprint": "Выходные данные",
+    "link_privacy_bottom": "Конфиденциальность",
+    "copyright": "Все права защищены.",
+    "back_to_top": "Наверх",
+    "region_label": "Подвал и контактная информация",
+    "home_aria": "O&I CLEAN - Главная",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Быстрые ссылки",
+    "phone_aria": "Номер телефона",
+    "email_aria": "Email"
+  },
+  "header": {
+    "topbar_tagline": "Уборка, которой можно доверять — сервис 24/7",
+    "cta_label": "Записаться на прием",
+    "cta_href": "/contact",
+    "hide_topbar": "Скрыть верхнюю панель",
+    "home_aria": "Главная страница",
+    "main_nav": "Главная навигация",
+    "menu_open": "Открыть меню",
+    "menu_close": "Закрыть меню",
+    "language": "Язык",
+    "impressum": "Выходные данные",
+    "contact_button": "Контакт"
+  },
+  "nav": {
+    "home": "Главная"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Главная",
+    "breadcrumbs_page": "Страница",
+    "empty_content": "Контент будет добавлен в ближайшее время."
+  },
+  "offerDock": {
+    "title": "Предложение",
+    "subtitle": "Бесплатно и без обязательств",
+    "button": "Запросить",
+    "aria_open": "Открыть панель предложений",
+    "aria_close": "Закрыть панель предложений"
+  },
+  "quote_modal": {
+    "title": "Запросить предложение",
+    "scrim_aria": "Закрыть окно",
+    "close_aria": "Закрыть",
+    "field_name": "Имя",
+    "field_email": "Email",
+    "field_phone": "Телефон",
+    "field_service": "Услуга",
+    "field_message": "Сообщение",
+    "service_placeholder": "Пожалуйста, выберите…",
+    "service_hotel_cleaning": "Уборка отеля",
+    "service_building_cleaning": "Уборка зданий",
+    "service_window_cleaning": "Мойка окон",
+    "service_maintenance_cleaning": "Поддерживающая уборка",
+    "service_basic_cleaning": "Генеральная уборка",
+    "service_carpet_cleaning": "Чистка ковров",
+    "service_other": "Другое",
+    "service_general": "Общее",
+    "message_placeholder": "Что мы можем для вас сделать?",
+    "consent_prefix": "Я согласен на обработку моих данных в соответствии с ",
+    "consent_link": "политикой конфиденциальности",
+    "consent_suffix": ".",
+    "cancel": "Отмена",
+    "submit": "Запросить",
+    "sending": "Отправка…",
+    "error_consent": "Пожалуйста, дайте согласие на обработку данных.",
+    "error_generic": "Что-то пошло не так. Попробуйте еще раз.",
+    "subject_prefix": "Запрос КП",
+    "thank_you_title": "Спасибо!",
+    "thank_you_text": "Ваш запрос получен, мы свяжемся с вами в ближайшее время.",
+    "close_button": "Закрыть"
+  },
+  "cookies": {
+    "title": "Настройки файлов cookie",
+    "message": "Мы используем файлы cookie, чтобы обеспечить вам наилучшее взаимодействие с нашим сайтом.",
+    "accept_all": "Принять все",
+    "reject": "Отклонить",
+    "save": "Сохранить выбор"
+  },
+  "required": {
+    "name": "Имя обязательно.",
+    "phone": "Телефон обязателен.",
+    "email": "Email обязателен.",
+    "message": "Сообщение обязательно."
+  }
+}

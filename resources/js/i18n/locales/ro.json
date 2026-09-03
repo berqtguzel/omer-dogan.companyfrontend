@@ -1,0 +1,174 @@
+{
+  "hero": {
+    "title": "Partenerul tău de încredere în cazare și managementul facilităților",
+    "subtitle": "Cu peste 25 de ani de experiență, oferim soluții integrate personalizate pentru curățenie, întreținere și managementul facilităților",
+    "button_services": "Descoperă serviciile noastre",
+    "button_contact": "Contactează-ne acum"
+  },
+  "services": {
+    "section_title": "Gama noastră largă de servicii",
+    "section_subtitle": "Oferim soluții la cheie pentru toate nevoile facilităților și clădirilor dumneavoastră – cu precizie și calitate germană.",
+    "learn_more": "Informații detaliate",
+    "categories": {
+      "hotel": {
+        "title": "Curățenie hotelieră și housekeeping",
+        "description": "De la curățarea camerelor până la spălătorie – igienă impecabilă și procese eficiente în fiecare zonă a hotelului dumneavoastră."
+      },
+      "building": {
+        "title": "Curățenie profesională a clădirilor",
+        "description": "Birouri, zone comerciale, curățenie după constructor și curățenii speciale – facem proprietățile dumneavoastră să strălucească."
+      },
+      "renovation": {
+        "title": "Renovare, reparații și întreținere",
+        "description": "Zugrăveli, lucrări de gips-carton, pardoseli și reparații mici."
+      }
+    },
+    "card": {
+      "aria": "Obține mai multe informații despre {{service}}",
+      "button": "Detalii"
+    }
+  },
+  "servicesList": {
+    "title": "Servicii",
+    "subtitle": "Descoperiți serviciile noastre complete pentru casa și afacerea dumneavoastră",
+    "meta_title": "Serviciile Noastre - O&I CLEAN group GmbH",
+    "meta_description": "Curățenie profesională, renovare și managementul facilităților.",
+    "loading": "Se încarcă…",
+    "contact_cta": "Contactează-ne",
+    "contact_cta_aria": "Contactează-ne acum"
+  },
+  "contact": {
+    "page_title": "Contact",
+    "intro_static_text": "Gratuit și fără obligații –",
+    "intro_dynamic_text": "vă vom răspunde în cel mai scurt timp posibil",
+    "title": "Contactează-ne",
+    "description": "Servicii profesionale de curățenie pentru compania dumneavoastră. Suntem bucuroși să vă informăm individual.",
+    "submit_label": "Trimite mesaj",
+    "submit_failed": "Mesajul nu a putut fi trimis.",
+    "select_placeholder": "Vă rugăm selectați",
+    "success_title": "Succes!",
+    "success_message": "Mesajul dumneavoastră a fost trimis cu succes. Vă vom contacta în curând.",
+    "redirecting": "Pagina se reîncarcă...",
+    "phone_label": "Telefon",
+    "submitting": "Se trimite...",
+    "success_sub": "Vă vom contacta în curând.",
+    "email_label": "Email",
+    "hours_label": "Program de lucru",
+    "hours_value": "Lun. - Vin.: 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Nume",
+      "phone": "Telefon",
+      "email": "Email",
+      "message": "Mesaj",
+      "other": "Câmp"
+    },
+    "required": {
+      "name": "Numele este obligatoriu.",
+      "phone": "Telefonul este obligatoriu.",
+      "email": "Email-ul este obligatoriu.",
+      "message": "Mesajul este obligatoriu."
+    },
+    "error_generic": "A apărut o eroare. Vă rugăm să încercați din nou."
+  },
+  "footer": {
+    "description": "Suntem alături de dumneavoastră cu temeinicia și fiabilitatea germană în curățenie profesională, întreținere și managementul facilităților.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Link-uri",
+    "contact_title": "Contact",
+    "link_about": "Despre noi",
+    "link_contact": "Contact",
+    "link_contact_href": "/contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Confidențialitate",
+    "link_imprint": "Amprentă legală",
+    "link_privacy_bottom": "Confidențialitate",
+    "copyright": "Toate drepturile rezervate.",
+    "back_to_top": "Înapoi sus",
+    "region_label": "Subsol și informații de contact",
+    "home_aria": "O&I CLEAN - Pagina principală",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Link-uri rapide",
+    "phone_aria": "Număr de telefon",
+    "email_aria": "Email"
+  },
+  "header": {
+    "topbar_tagline": "Curățenie în care poți avea încredere — Serviciu 24/7",
+    "cta_label": "Programați o întâlnire",
+    "cta_href": "/contact",
+    "hide_topbar": "Ascunde bara de sus",
+    "home_aria": "Pagina principală",
+    "main_nav": "Navigație principală",
+    "menu_open": "Deschide meniul",
+    "menu_close": "Închide meniul",
+    "language": "Limbă",
+    "impressum": "Amprentă legală",
+    "contact_button": "Contact"
+  },
+  "nav": {
+    "home": "Acasă"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Acasă",
+    "breadcrumbs_page": "Pagină",
+    "empty_content": "Conținutul va fi adăugat în curând."
+  },
+  "offerDock": {
+    "title": "Ofertă",
+    "subtitle": "Gratuit și fără obligații",
+    "button": "Solicită",
+    "aria_open": "Deschide panoul de ofertă",
+    "aria_close": "Închide panoul de ofertă"
+  },
+  "quote_modal": {
+    "title": "Solicită o ofertă",
+    "scrim_aria": "Închide fereastra",
+    "close_aria": "Închide",
+    "field_name": "Nume",
+    "field_email": "Email",
+    "field_phone": "Telefon",
+    "field_service": "Serviciu",
+    "field_message": "Mesaj",
+    "service_placeholder": "Vă rugăm selectați…",
+    "service_hotel_cleaning": "Curățenie hotelieră",
+    "service_building_cleaning": "Curățenie clădiri",
+    "service_window_cleaning": "Curățenie geamuri",
+    "service_maintenance_cleaning": "Curățenie de întreținere",
+    "service_basic_cleaning": "Curățenie generală/profundă",
+    "service_carpet_cleaning": "Curățare covoare",
+    "service_other": "Altele",
+    "service_general": "General",
+    "message_placeholder": "Ce putem face pentru dumneavoastră?",
+    "consent_prefix": "Sunt de acord cu prelucrarea datelor mele în conformitate cu ",
+    "consent_link": "politica de confidențialitate",
+    "consent_suffix": ".",
+    "cancel": "Anulează",
+    "submit": "Solicită",
+    "sending": "Se trimite…",
+    "error_consent": "Vă rugăm să vă dați consimțământul pentru prelucrarea datelor.",
+    "error_generic": "Ceva nu a mers bine. Vă rugăm să încercați din nou.",
+    "subject_prefix": "Solicitare ofertă",
+    "thank_you_title": "Mulțumim!",
+    "thank_you_text": "Solicitarea dumneavoastră a fost primită, vă vom contacta în curând.",
+    "close_button": "Închide"
+  },
+  "cookies": {
+    "title": "Preferințe Cookie",
+    "message": "Folosim cookie-uri pentru a vă asigura cea mai bună experiență pe site-ul nostru.",
+    "accept_all": "Acceptă tot",
+    "reject": "Refuză",
+    "save": "Salvează selecția"
+  },
+  "required": {
+    "name": "Numele este obligatoriu.",
+    "phone": "Telefonul este obligatoriu.",
+    "email": "Email-ul este obligatoriu.",
+    "message": "Mesajul este obligatoriu."
+  }
+}

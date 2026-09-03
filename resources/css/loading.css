@@ -1,0 +1,217 @@
+:root {
+  --loading-primary: var(--site-primary-color, var(--primary-color, #2563eb));
+  --loading-surface: #ffffff;
+  --loading-text: #111827;
+  --loading-muted: #64748b;
+  --loading-border: rgba(15, 23, 42, 0.1);
+}
+
+.dark {
+  --loading-surface: #141a22;
+  --loading-text: #f8fafc;
+  --loading-muted: #94a3b8;
+  --loading-border: rgba(255, 255, 255, 0.1);
+}
+
+.oi-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  overflow: hidden;
+  pointer-events: auto;
+  background: var(--loading-surface);
+  color: var(--loading-text);
+  animation: oi-loading-enter 160ms ease-out both;
+}
+
+.oi-loading::before,
+.oi-loading::after {
+  content: "";
+  position: absolute;
+  width: min(34vw, 440px);
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--loading-primary) 16%, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.oi-loading::before {
+  top: 0;
+  left: 0;
+  transform: translate(-46%, -48%);
+}
+
+.oi-loading::after {
+  right: 0;
+  bottom: 0;
+  transform: translate(46%, 48%);
+}
+
+.oi-loading__surface {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.oi-loading__brand {
+  min-width: 112px;
+  min-height: 76px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+}
+
+.oi-loading__logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(260px, 72vw);
+  max-height: 92px;
+  object-fit: contain;
+}
+
+.oi-loading__monogram {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: var(--loading-primary);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.oi-loading__copy {
+  display: grid;
+  gap: 5px;
+  margin-bottom: 25px;
+}
+
+.oi-loading__copy strong {
+  color: var(--loading-text);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.oi-loading__copy span {
+  color: var(--loading-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.oi-loading__track {
+  width: min(260px, 68vw);
+  height: 3px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--loading-primary) 13%, var(--loading-border));
+}
+
+.oi-loading__track span {
+  display: block;
+  width: 42%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--loading-primary);
+  transform: translateX(-115%);
+  animation: oi-loading-progress 1s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes oi-loading-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes oi-loading-progress {
+  0% { transform: translateX(-115%); }
+  55%, 100% { transform: translateX(245%); }
+}
+
+@media (max-width: 640px) {
+  .oi-loading {
+    padding: 20px;
+  }
+
+  .oi-loading__brand {
+    margin-bottom: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oi-loading {
+    animation: none;
+  }
+
+  .oi-loading__track span {
+    width: 62%;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* Premium transition screen */
+.oi-loading {
+  background:
+    linear-gradient(90deg, transparent calc(50% - .5px), color-mix(in srgb, var(--loading-primary) 14%, transparent) 50%, transparent calc(50% + .5px)),
+    color-mix(in srgb, var(--loading-primary) 7%, var(--loading-surface) 93%);
+  animation: oi-curtain-in .3s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.oi-loading::before,
+.oi-loading::after {
+  width: min(62vw, 720px);
+  border-color: color-mix(in srgb, var(--loading-primary) 18%, transparent);
+  border-radius: 0;
+  animation: oi-frame-turn 7s linear infinite;
+}
+
+.oi-loading::before { transform: translate(-58%, -58%) rotate(18deg); }
+.oi-loading::after { transform: translate(58%, 58%) rotate(18deg); animation-direction: reverse; }
+
+.oi-loading__surface { width: min(100%, 520px); }
+
+.oi-loading__orbit {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 190px; height: 190px;
+  border: 1px solid color-mix(in srgb, var(--loading-primary) 22%, transparent);
+  transform: translate(-50%, -63%) rotate(45deg);
+  animation: oi-orbit 3.6s cubic-bezier(.65,0,.35,1) infinite;
+}
+
+.oi-loading__orbit span { position: absolute; background: var(--loading-primary); }
+.oi-loading__orbit span:nth-child(1) { top: -3px; left: -3px; width: 7px; height: 7px; }
+.oi-loading__orbit span:nth-child(2) { right: -2px; bottom: -2px; width: 5px; height: 5px; }
+.oi-loading__orbit span:nth-child(3) { inset: 50% auto auto 50%; width: 34px; height: 1px; transform: translate(-50%, -50%); }
+
+.oi-loading__brand { z-index: 1; min-height: 98px; margin-bottom: 32px; }
+.oi-loading__logo { max-width: min(240px, 64vw); max-height: 82px; filter: drop-shadow(0 8px 22px color-mix(in srgb, var(--loading-primary) 18%, transparent)); }
+.oi-loading__monogram { border-radius: 2px; box-shadow: 9px 9px 0 color-mix(in srgb, var(--loading-primary) 20%, transparent); }
+
+.oi-loading__copy { gap: 8px; margin-bottom: 30px; }
+.oi-loading__copy strong {
+  font-family: "Segoe UI Variable Display", "Aptos Display", Inter, system-ui, sans-serif;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 720; letter-spacing: -.035em;
+}
+.oi-loading__copy span { font-size: .7rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+.oi-loading__track { width: min(320px, 72vw); height: 2px; border-radius: 0; }
+.oi-loading__track span { width: 28%; border-radius: 0; animation: oi-loading-progress 1.2s cubic-bezier(.65,0,.35,1) infinite; }
+
+@keyframes oi-curtain-in { from { opacity: 0; clip-path: inset(0 50%); } to { opacity: 1; clip-path: inset(0); } }
+@keyframes oi-orbit { 0% { transform: translate(-50%, -63%) rotate(45deg) scale(.92); } 50% { transform: translate(-50%, -63%) rotate(225deg) scale(1.04); } 100% { transform: translate(-50%, -63%) rotate(405deg) scale(.92); } }
+@keyframes oi-frame-turn { to { rotate: 360deg; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .oi-loading::before, .oi-loading::after, .oi-loading__orbit { animation: none; }
+}

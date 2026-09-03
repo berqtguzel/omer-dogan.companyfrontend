@@ -1,0 +1,218 @@
+{
+  "hero": {
+    "title": "Your reliable partner in accommodation and facility management",
+    "subtitle": "With over 25 years of experience, we offer custom-integrated solutions for cleaning, maintenance, and facility management",
+    "button_services": "Discover our services",
+    "button_contact": "Contact us now"
+  },
+  "services": {
+    "section_title": "Our wide range of services",
+    "section_subtitle": "We provide turnkey solutions for all the needs of your facilities and buildings – with German precision and quality.",
+    "learn_more": "Detailed information",
+    "categories": {
+      "hotel": {
+        "title": "Hotel cleaning & housekeeping",
+        "description": "From room cleaning to the dish room – impeccable hygiene and efficient processes in every area of your hotel."
+      },
+      "building": {
+        "title": "Professional building cleaning",
+        "description": "Offices, commercial areas, post-construction cleaning, and special cleanings – we make your properties shine."
+      },
+      "renovation": {
+        "title": "Renovation, repair & maintenance",
+        "description": "Painting, plaster and drywall work, flooring, and small repairs."
+      }
+    },
+    "card": {
+      "aria": "Get more information about {{service}}",
+      "button": "Details"
+    }
+  },
+  "servicesList": {
+    "title": "Services",
+    "subtitle": "Discover our comprehensive services for your home and business",
+    "meta_title": "Our Services - O&I CLEAN group GmbH",
+    "meta_description": "Professional cleaning, renovation, and facility management.",
+    "loading": "Loading…",
+    "contact_cta": "Contact us",
+    "contact_cta_aria": "Contact us now"
+  },
+  "contact": {
+    "page_title": "Contact",
+    "intro_static_text": "Free and non-binding –",
+    "intro_dynamic_text": "we will get back to you as soon as possible",
+    "title": "Contact us",
+    "description": "Professional cleaning services for your company. We are happy to inform you individually.",
+    "submit_label": "Send message",
+    "submit_failed": "Message could not be sent.",
+    "select_placeholder": "Please select",
+    "success_title": "Success!",
+    "success_message": "Your message has been sent successfully. We will get back to you shortly.",
+    "redirecting": "Page is reloading...",
+    "phone_label": "Phone",
+    "submitting": "Submitting...",
+    "success_sub": "We will get back to you shortly.",
+    "email_label": "Email",
+    "hours_label": "Opening hours",
+    "hours_value": "Mon. - Fri.: 08:00 - 17:00",
+    "phone_number": "",
+    "email_address": "",
+    "form": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Message",
+      "other": "Field"
+    },
+    "required": {
+      "name": "Name is required.",
+      "phone": "Phone is required.",
+      "email": "Email is required.",
+      "message": "Message is required."
+    },
+    "error_generic": "An error occurred. Please try again."
+  },
+  "footer": {
+    "description": "We stand by you with German thoroughness and reliability in professional cleaning, maintenance, and facility management.",
+    "address": "",
+    "phone": "",
+    "phone_raw": "",
+    "email": "",
+    "links_title": "Links",
+    "contact_title": "Contact",
+    "link_about": "About us",
+    "link_contact": "Contact",
+    "link_contact_href": "/contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Privacy",
+    "link_imprint": "Imprint",
+    "link_privacy_bottom": "Privacy",
+    "copyright": "All rights reserved.",
+    "back_to_top": "Back to top",
+    "region_label": "Footer and contact information",
+    "home_aria": "O&I CLEAN - Home page",
+    "linkedin_aria": "LinkedIn - O&I CLEAN",
+    "instagram_aria": "Instagram - O&I CLEAN",
+    "facebook_aria": "Facebook - O&I CLEAN",
+    "quicklinks_aria": "Quick links",
+    "phone_aria": "Phone number",
+    "email_aria": "Email",
+    "services": "Services"
+  },
+  "header": {
+    "topbar_tagline": "Cleaning you can trust — 24/7 service",
+    "cta_label": "Book an appointment",
+    "cta_href": "/contact",
+    "hide_topbar": "Hide top bar",
+    "home_aria": "Home page",
+    "main_nav": "Main navigation",
+    "menu_open": "Open menu",
+    "menu_close": "Close menu",
+    "language": "Language",
+    "impressum": "Imprint",
+    "contact_button": "Contact"
+  },
+  "nav": {
+    "home": "Home"
+  },
+  "staticPage": {
+    "breadcrumbs_home": "Home",
+    "breadcrumbs_page": "Page",
+    "empty_content": "Content will be added soon."
+  },
+  "offerDock": {
+    "title": "Offer",
+    "subtitle": "Free & non-binding",
+    "button": "Request",
+    "aria_open": "Open offer panel",
+    "aria_close": "Close offer panel"
+  },
+  "quote_modal": {
+    "title": "Request a quote",
+    "scrim_aria": "Close modal",
+    "close_aria": "Close",
+    "field_name": "Name",
+    "field_email": "Email",
+    "field_phone": "Phone",
+    "field_service": "Service",
+    "field_message": "Message",
+    "service_placeholder": "Please select…",
+    "service_hotel_cleaning": "Hotel cleaning",
+    "service_building_cleaning": "Building cleaning",
+    "service_window_cleaning": "Window cleaning",
+    "service_maintenance_cleaning": "Maintenance cleaning",
+    "service_basic_cleaning": "General/deep cleaning",
+    "service_carpet_cleaning": "Carpet cleaning",
+    "service_other": "Other",
+    "service_general": "General",
+    "message_placeholder": "What can we do for you?",
+    "consent_prefix": "I agree to the processing of my data in accordance with the ",
+    "consent_link": "privacy policy",
+    "consent_suffix": ".",
+    "cancel": "Cancel",
+    "submit": "Request",
+    "sending": "Sending…",
+    "error_consent": "Please provide consent for data processing.",
+    "error_generic": "Something went wrong. Please try again.",
+    "subject_prefix": "Quote request",
+    "thank_you_title": "Thank you!",
+    "thank_you_text": "Your request has been received, we will contact you shortly.",
+    "close_button": "Close"
+  },
+  "errors": {
+    "notFound": {
+      "404": "The requested page could not be found.",
+      "500": "A server error occurred — please try again later.",
+      "home": "Back to Home",
+      "contact": "Contact Us",
+      "reload": "Reload Page"
+    }
+  },
+  "ui": {
+    "loading": {
+      "message": "Content is loading…"
+    }
+  },
+  "cookies": {
+    "title": "Cookie Preferences",
+    "message": "We use cookies to ensure you have the best experience on our website.",
+    "cat_necessary": "Necessary Cookies",
+    "cat_analytics": "Analytics Cookies",
+    "cat_marketing": "Marketing Cookies",
+    "desc_necessary": "These cookies are required for the website to function.",
+    "desc_analytics": "These cookies collect information about how you use our site.",
+    "desc_marketing": "These cookies are used to show you relevant advertisements.",
+    "required": "Required",
+    "accept_all": "Accept All",
+    "reject": "Reject",
+    "save": "Save Selection",
+    "settings": "Preferences",
+    "hide_details": "Hide Details",
+    "privacy_policy": "Privacy Policy",
+    "imprint": "Imprint"
+  },
+  "common": {
+    "ok": "OK",
+    "demo": "Demo"
+  },
+  "required": {
+    "name": "Name is required.",
+    "phone": "Phone is required.",
+    "email": "Email is required.",
+    "message": "Message is required."
+  },
+  "submit_error": "Error! Please try again.",
+  "reviews": {
+    "title": "What our clients say",
+    "subtitle": "Real feedback from the hotels, offices and properties we look after every day.",
+    "eyebrow": "Testimonials",
+    "rating_label": "Rating",
+    "count": "{{count}} reviews",
+    "anonymous": "Client"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "The answers we are asked for most often. Question not covered? Just get in touch.",
+    "eyebrow": "FAQ"
+  }
+}

@@ -1,0 +1,31 @@
+/node_modules
+# Build çıktıları repoda tutulur (sunucuda npm yok).
+# /public/build
+# /bootstrap/ssr
+/public/hot
+/public/storage
+/storage/*.key
+/storage/app/public/media-cache
+/storage/app/media-mirror
+/storage/logs
+/vendor
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+oicleanfront.zip
+
+oicleanfront.zip
+node_modules/
+vendor/
