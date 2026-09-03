@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\ButtonTrackingController;
-use App\Http\Controllers\UpdateController;
 use App\Http\Controllers\WidgetController;
 use App\Http\Controllers\OmrCacheWebhookController;
 
@@ -35,12 +34,3 @@ Route::get('/widgets', [WidgetController::class, 'index'])
 Route::post('/analytics/{endpoint}', [AnalyticsController::class, 'store']);
 Route::post('/v2/analytics/{endpoint}', [AnalyticsController::class, 'store']);
 Route::post('/button-tracking/track', [ButtonTrackingController::class, 'track']);
-
-Route::prefix('update')
-    ->withoutMiddleware(['throttle:api'])
-    ->group(function () {
-        Route::post('/webhook', [UpdateController::class, 'webhook']);
-        Route::get('/check', [UpdateController::class, 'check']);
-        Route::match(['get', 'post'], '/run', [UpdateController::class, 'run']);
-        Route::get('/status', [UpdateController::class, 'status']);
-    });

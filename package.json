@@ -10,16 +10,14 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vite build --ssr",
+    "build": "vite build",
     "build:client": "vite build",
-    "build:ssr": "vite build --ssr",
     "test:js": "node tests/js/buttonTracking.test.js",
     "preview": "vite preview"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@inertiajs/react": "^1.2.0",
-    "@inertiajs/server": "^0.1.0",
     "@tanstack/react-virtual": "^3.13.12",
     "axios": "^1.13.2",
     "framer-motion": "^11.0.0",

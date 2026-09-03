@@ -55,7 +55,6 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
-    'main_tenant' => env('OMR_MAIN_TENANT'),
     'pretty_html_source' => (bool) env('PRETTY_HTML_SOURCE', true),
 
     'asset_url' => env('ASSET_URL'),

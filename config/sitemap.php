@@ -3,19 +3,15 @@
 use App\Support\LocaleMapper;
 
 return [
-    // "cache" never contacts the remote sitemap/content endpoints while a
-    // crawler is waiting. Set to "live" only for legacy diagnostics.
-    'source' => env('SITEMAP_SOURCE', 'cache'),
+    // Local mode builds the sitemap from known application routes and never
+    // contacts the remote content or sitemap APIs.
+    'source' => env('SITEMAP_SOURCE', 'local'),
 
     'base_url' => rtrim(env('TENANT_CANONICAL_URL', env('SITEMAP_BASE_URL', env('APP_URL', 'http://localhost'))), '/'),
 
     'locales' => LocaleMapper::WEB_LOCALES,
 
-    'modules' => [
-        'pages',
-        'blog',
-        'services',
-    ],
+    'modules' => ['pages'],
 
     'max_urls_per_file' => 50000,
     'fresh_hours' => 24,

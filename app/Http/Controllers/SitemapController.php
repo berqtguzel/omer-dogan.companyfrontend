@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exceptions\EmptySitemapException;
 use App\Services\CachedSitemapService;
+use App\Services\LocalSitemapService;
 use App\Services\SitemapLiveService;
 use App\Support\LocaleMapper;
 use Illuminate\Http\Response;
@@ -14,6 +15,7 @@ class SitemapController extends Controller
     public function __construct(
         private readonly CachedSitemapService $cachedSitemaps,
         private readonly SitemapLiveService $liveSitemaps,
+        private readonly LocalSitemapService $localSitemaps,
     ) {}
 
     public function globalIndex(): Response
@@ -111,14 +113,20 @@ class SitemapController extends Controller
         return response((string) $document['xml'], 200, $headers);
     }
 
-    private function sitemaps(): CachedSitemapService|SitemapLiveService
+    private function sitemaps(): CachedSitemapService|SitemapLiveService|LocalSitemapService
     {
-        return $this->sourceName() === 'live' ? $this->liveSitemaps : $this->cachedSitemaps;
+        return match ($this->sourceName()) {
+            'live' => $this->liveSitemaps,
+            'cache' => $this->cachedSitemaps,
+            default => $this->localSitemaps,
+        };
     }
 
     private function sourceName(): string
     {
-        return strtolower((string) config('sitemap.source', 'cache')) === 'live' ? 'live' : 'cache';
+        $source = strtolower((string) config('sitemap.source', 'local'));
+
+        return in_array($source, ['local', 'cache', 'live'], true) ? $source : 'local';
     }
 
     private function missingUrlset(): Response

@@ -5,11 +5,9 @@ namespace App\Providers;
 use App\Http\Controllers\LanguagesController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SettingsController;
-use App\Inertia\TimeoutSsrGateway;
 use App\Support\OmrConfig;
 use Illuminate\Support\ServiceProvider;
 use Inertia\Inertia;
-use Inertia\Ssr\Gateway;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,8 +18,6 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->app->bind(Gateway::class, TimeoutSsrGateway::class);
-
         Inertia::share('global', function () {
             $locale = session('locale', OmrConfig::defaultLocale());
             $tenantId = OmrConfig::tenantId();

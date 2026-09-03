@@ -4,7 +4,7 @@ return [
     'dashboard' => [
         'api_url' => env('DASHBOARD_API_URL', 'https://api.dashboard.example.com'),
         'api_key' => env('DASHBOARD_API_KEY'),
-        'site_id' => env('DASHBOARD_SITE_ID'),
+        'site_id' => env('TENANT_ID'),
         'version' => 'v1',
         'endpoints' => [
             'auth' => '/auth',

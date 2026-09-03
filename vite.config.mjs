@@ -11,7 +11,6 @@ export default defineConfig(({ command }) => {
                 input: [
                     'resources/js/app.jsx',
                 ],
-                ssr: 'resources/js/ssr.jsx',
                 refresh: !isBuild,
             }),
             react(),

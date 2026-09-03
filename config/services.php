@@ -37,13 +37,9 @@ return [
          */
         'demo_content' => filter_var(env('OMR_DEMO_CONTENT', true), FILTER_VALIDATE_BOOLEAN),
         /** Boşsa fallback kullanılır (config() ile okunmalı). */
-        'tenant_id' => env('OMR_TENANT_ID', ''),
-        'tenant_id_fallback' => env('OMR_TENANT_ID_FALLBACK', 'oi_clean_groupde_693fac5831392'),
-        'dashboard_site_id' => env('DASHBOARD_SITE_ID', ''),
+        'tenant_id' => env('TENANT_ID', ''),
         'default_locale' => env('OMR_DEFAULT_LOCALE', 'de'),
         /** Brand / shared content tenant (optional). */
-        'main_tenant' => env('OMR_MAIN_TENANT'),
-        'media_main_tenant' => env('OMR_MEDIA_MAIN_TENANT', ''),
         /** Harita / bölge (.env’de VITE_* — build + sunucu için aynı değerler). */
         'tenant_district' => env('VITE_TENANT_DISTRICT', ''),
         'tenant_city' => env('VITE_TENANT_CITY', ''),
@@ -59,7 +55,7 @@ return [
     'api' => [
         'base_url'  => env('DASHBOARD_API_URL', 'https://omerdogan.de/api'),
         'api_key'   => env('DASHBOARD_API_KEY', ''),
-        'site_id'   => env('DASHBOARD_SITE_ID', ''),
+        'site_id'   => env('TENANT_ID', ''),
         'cache_ttl' => env('DASHBOARD_CACHE_TTL', 3600),
     ],
 

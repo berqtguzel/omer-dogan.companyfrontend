@@ -78,7 +78,7 @@ class MapController extends Controller
             return [];
         }
 
-        // OMR_MAIN_TENANT kullan
+        // Uygulamanın tek TENANT_ID değerini kullan.
         $mainTenant = OmrConfig::mainTenantId() ?: $tenant;
         $mainTenant = strtolower($mainTenant);
         $locale = strtolower($locale);

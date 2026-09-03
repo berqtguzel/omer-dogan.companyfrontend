@@ -24,7 +24,7 @@ class ServiceController extends Controller
         session(['locale' => $locale]);
 
         if (! $tenantId || ! $apiTenant) {
-            return response()->json(['error' => 'OMR_TENANT_ID missing'], 500);
+            return response()->json(['error' => 'TENANT_ID missing'], 500);
         }
 
         $categories = OmrCatalog::rootCategories($apiTenant, $locale);

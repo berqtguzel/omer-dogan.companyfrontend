@@ -441,7 +441,7 @@ class StaticPageController extends Controller
         $pageSlug = strtolower(trim((string) $pageSlug));
 
         if (! $tenant || ! $mainTenant) {
-            abort(500, 'OMR_TENANT_ID missing');
+            abort(500, 'TENANT_ID missing');
         }
 
         $errorPages = [

@@ -14,7 +14,7 @@ class Controller extends BaseController
 
     /**
      * Resim/media çekme işlemleri için tenant ID'yi döndürür
-     * OMR_MAIN_TENANT varsa onu, yoksa OMR_TENANT_ID'yi kullanır
+     * Tüm içerik isteklerinde tek TENANT_ID değerini kullanır.
      * 
      * @return string|null
      */

@@ -9,27 +9,23 @@ final class OmrConfig
 {
     public static function tenantId(): string
     {
-        return (string) (config('services.omr.tenant_id') ?: config('services.omr.tenant_id_fallback'));
+        return trim((string) config('services.omr.tenant_id', ''));
     }
 
     public static function mainTenantId(): ?string
     {
-        $m = config('services.omr.main_tenant');
-
-        return ($m !== null && $m !== '') ? (string) $m : null;
+        return self::tenantId() ?: null;
     }
 
     /** API isteklerinde: ana marka tenant’ı varsa o, yoksa site tenant’ı. */
     public static function tenantForSharedContent(): string
     {
-        return self::mainTenantId() ?: self::tenantId();
+        return self::tenantId();
     }
 
     public static function dashboardSiteId(): ?string
     {
-        $siteId = config('services.omr.dashboard_site_id') ?: config('services.api.site_id');
-
-        return ($siteId !== null && $siteId !== '') ? (string) $siteId : null;
+        return self::tenantId() ?: null;
     }
 
     public static function baseUrl(): string
