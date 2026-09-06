@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CorporateCatalogController;
+use App\Http\Controllers\CorporatePageController;
 use App\Http\Controllers\DynamicSlugController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LegacyUrlRedirectController;
@@ -26,6 +28,24 @@ $cacheOnlyXmlMiddleware = [
 ];
 
 $webLocalePattern = 'de|en|tr|ru|fr|es|it|pt|ro|pl|cs|sk|bg|hr';
+
+foreach (['unternehmensgruppe', 'ueber-uns', 'karriere', 'impressum', 'datenschutz'] as $corporatePage) {
+    Route::get('/'.$corporatePage, [CorporatePageController::class, 'show'])
+        ->defaults('corporatePage', $corporatePage)->defaults('locale', OmrConfig::defaultLocale())
+        ->name('corporate.page.'.$corporatePage.'.default');
+    Route::get('/{locale}/'.$corporatePage, [CorporatePageController::class, 'show'])
+        ->defaults('corporatePage', $corporatePage)->where('locale', $webLocalePattern)
+        ->middleware('applyLocale')->name('corporate.page.'.$corporatePage);
+}
+
+foreach (['geschaeftsbereiche', 'unternehmen', 'projekte'] as $catalog) {
+    Route::get('/'.$catalog.'/{item?}', [CorporateCatalogController::class, 'show'])
+        ->defaults('catalog', $catalog)->defaults('locale', OmrConfig::defaultLocale())
+        ->where('item', '[A-Za-z0-9_-]+')->name('corporate.'.$catalog.'.default');
+    Route::get('/{locale}/'.$catalog.'/{item?}', [CorporateCatalogController::class, 'show'])
+        ->defaults('catalog', $catalog)->where('locale', $webLocalePattern)
+        ->where('item', '[A-Za-z0-9_-]+')->middleware('applyLocale')->name('corporate.'.$catalog);
+}
 
 // Repair URLs produced by the former language switcher. The first locale is
 // the language the visitor selected; subsequent locale segments are stale.
@@ -60,7 +80,7 @@ Route::get('/_mail-preview/contact', function (\Illuminate\Http\Request $request
     $isLocalRequest = in_array($request->getHost(), ['localhost', '127.0.0.1', '::1'], true)
         || in_array($request->ip(), ['127.0.0.1', '::1'], true);
 
-    abort_unless(app()->environment(['local', 'testing']) || $isLocalRequest, 404);
+    abort_unless(app()->environment(['local', 'testing']) && $isLocalRequest, 404);
 
     return new ContactFormMail([
         'name' => 'Max Mustermann',
@@ -124,7 +144,8 @@ Route::get('/.well-known/ai.json', [SeoFilesController::class, 'ai']);
 Route::get('/ai/brand.md', [SeoFilesController::class, 'aiBrandMarkdown']);
 Route::get('/ai/knowledge.md', [SeoFilesController::class, 'aiKnowledgeMarkdown']);
 Route::get('/ai/about.md', [SeoFilesController::class, 'aiAboutMarkdown']);
-Route::get('/_seo-files/sync', [SeoFilesController::class, 'sync']);
+Route::post('/_seo-files/sync', [SeoFilesController::class, 'sync'])
+    ->middleware('throttle:3,1');
 
 Route::get('/reinigungsleistungen', [ServiceController::class, 'index'])
     ->defaults('locale', OmrConfig::defaultLocale())

@@ -487,8 +487,8 @@ class StaticPageController extends Controller
             abort(404);
         }
 
-        return Inertia::render('Pages/Show', [
-            'page' => $page,
+        return Inertia::render('StaticPage', [
+            'document' => \App\Data\CorporatePageData::from($page, $locale),
             'locale' => $locale,
         ]);
     }

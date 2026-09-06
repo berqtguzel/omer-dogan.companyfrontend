@@ -21,7 +21,7 @@ class ContactFormMail extends Mailable
     public function build()
     {
         $mail = $this->view('emails.contact')
-            ->subject('Neue Kontaktanfrage von '.$this->data['name'])
+            ->subject('Neue Kontaktanfrage von '.preg_replace('/[\r\n]+/', ' ', mb_substr((string) $this->data['name'], 0, 255)))
             ->with([
                 'name' => $this->data['name'],
                 'company' => $this->data['company'] ?? null,

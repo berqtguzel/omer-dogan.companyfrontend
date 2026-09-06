@@ -57,6 +57,7 @@ export default function SeoHead({
   favicon,
 }) {
   const pageProps = usePage().props || {};
+  noindex = noindex || pageProps.corporateReady === false;
   const canonicalBaseUrl = pageProps.tenantSeo?.canonicalBaseUrl || '';
   const backendCanonicalUrl = pageProps.tenantSeo?.canonicalUrl || '';
   // Canonical URLs may only originate from the trusted server-side tenant

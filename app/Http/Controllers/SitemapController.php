@@ -20,6 +20,9 @@ class SitemapController extends Controller
 
     public function globalIndex(): Response
     {
+        if (! config('corporate_home.content_ready')) {
+            return $this->unavailableIndex();
+        }
         try {
             return $this->serve($this->sitemaps()->index());
         } catch (\Throwable $e) {
@@ -31,6 +34,9 @@ class SitemapController extends Controller
 
     public function index(string $locale): Response
     {
+        if (! config('corporate_home.content_ready')) {
+            return $this->unavailableIndex();
+        }
         $locale = LocaleMapper::toWeb($locale);
 
         if (! LocaleMapper::isSupportedWeb($locale)) {
@@ -71,6 +77,9 @@ class SitemapController extends Controller
 
     public function module(string $locale, string $module, ?int $page = null): Response
     {
+        if (! config('corporate_home.content_ready')) {
+            return $this->unavailableUrlset();
+        }
         $locale = LocaleMapper::toWeb($locale);
         [$module, $page] = $this->normalizeModule($module, $page);
 

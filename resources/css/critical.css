@@ -1,6 +1,4 @@
 /* İlk paint — bileşen CSS gelene kadar layout kaymasını önler */
-.site-header svg,
-.footer svg,
 .service-card__arrow {
     width: 1.15rem;
     height: 1.15rem;
@@ -9,19 +7,6 @@
     flex-shrink: 0;
 }
 
-.nav__chev,
-.submenu__arrow {
-    width: 0.875rem;
-    height: 0.875rem;
-    font-size: 0.875rem;
-}
-
-.service-card__image,
-.svc-card-img {
+.service-card__image {
     max-width: 100%;
-}
-
-.svc-card-img {
-    aspect-ratio: 360 / 230;
-    object-fit: cover;
 }

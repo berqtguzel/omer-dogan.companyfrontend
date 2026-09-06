@@ -1,6 +1,7 @@
 import "./bootstrap";
 import "../css/app.css";
 import "../css/theme.css";
+import "../css/design-system.css";
 
 import(/* webpackChunkName: "non-critical-css" */ "../css/loading.css").catch(
     () => {},
@@ -72,9 +73,7 @@ createInertiaApp({
 
         document.addEventListener("inertia:success", onInertiaSuccess);
         initializeAnalytics();
-        initializeButtonTracking({
-            tenantId: props.initialPage?.props?.tenantId,
-        });
+        initializeButtonTracking({ tenantId: props.initialPage?.props?.tenantId });
 
         const app = (
             <I18nextProvider i18n={i18n}>

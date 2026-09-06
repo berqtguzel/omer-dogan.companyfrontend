@@ -1,4 +1,62 @@
 {
+  "corporateHome": {
+    "eyebrow": "Ömer Dogan Company GmbH",
+    "title": "Unternehmen verbinden. Werte schaffen. Zukunft gestalten.",
+    "description": "Die Ömer Dogan Company GmbH entwickelt, betreibt und vernetzt Unternehmen in den Bereichen Hospitality, Immobilien, Dienstleistungen, Handel und Technologie.",
+    "discover": "Unternehmensgruppe entdecken",
+    "contact": "Kontakt aufnehmen",
+    "areasEyebrow": "Unsere Geschäftsbereiche",
+    "areasTitle": "Vielfalt, die uns verbindet.",
+    "areasDescription": "Unterschiedliche Kompetenzen. Ein gemeinsamer Anspruch: Unternehmen langfristig weiterzuentwickeln.",
+    "companiesEyebrow": "Die Unternehmensgruppe",
+    "companiesTitle": "Eigenständig. Und gemeinsam stärker.",
+    "companiesDescription": "Menschen und Unternehmen mit unterschiedlichen Stärken – verbunden durch eine gemeinsame Perspektive.",
+    "all": "Alle",
+    "details": "Mehr erfahren",
+    "projectsEyebrow": "Projekte & Investments",
+    "projectsTitle": "Zukunft nimmt Gestalt an.",
+    "networkEyebrow": "International verbunden",
+    "networkTitle": "Regional verwurzelt.\nEuropäisch vernetzt.",
+    "networkDescription": "Zusammenarbeit über Grenzen hinweg. Unser Netzwerk bringt lokale Erfahrung und unternehmerische Perspektiven zusammen.",
+    "visionEyebrow": "Unsere Haltung",
+    "visionTitle": "Wir denken in Verbindungen.\nUnd in Generationen.",
+    "visionDescription": "Wir verbinden unternehmerische Eigenständigkeit mit gemeinsamer Verantwortung. So schaffen wir Raum für Ideen, nachhaltige Entwicklung und Partnerschaften, die Bestand haben.",
+    "values": [
+      "Verantwortung übernehmen",
+      "Partnerschaften stärken",
+      "Zukunft gestalten"
+    ],
+    "careerEyebrow": "Karriere",
+    "careerTitle": "Gemeinsam mehr bewegen.",
+    "careerDescription": "Bringen Sie Ihre Erfahrung, Ihre Ideen und Ihre Perspektive ein. Gestalten Sie mit uns den nächsten Schritt.",
+    "careerButton": "Perspektiven entdecken",
+    "contactEyebrow": "Im Dialog",
+    "contactTitle": "Was können wir gemeinsam bewegen?",
+    "contactDescription": "Eine Idee, eine Partnerschaft oder eine neue Perspektive – wir freuen uns auf das Gespräch mit Ihnen.",
+    "play": "Video abspielen",
+    "videoError": "Das Video ist derzeit nicht verfügbar.",
+    "sectorCount": "Verbundene Unternehmen",
+    "back": "Zur Startseite",
+    "metricsLabel": "Kennzahlen der Unternehmensgruppe",
+    "areas": {
+      "hospitality": {
+        "title": "Hospitality",
+        "description": "Hotels, Resorts und Gastgeberkonzepte mit Persönlichkeit."
+      },
+      "real-estate": {
+        "title": "Immobilien & Projekte",
+        "description": "Immobilien und Standorte mit langfristiger Perspektive."
+      },
+      "facility": {
+        "title": "Facility & Industry",
+        "description": "Operative Dienstleistungen für Gebäude, Anlagen und Menschen."
+      },
+      "trade-technology": {
+        "title": "Handel & Technologie",
+        "description": "Internationale Märkte und digitale Möglichkeiten verbinden."
+      }
+    }
+  },
   "hero": {
     "title": "Ihr zuverlässiger Partner für Beherbergung und Gebäudemanagement",
     "subtitle": "Mit über 25 Jahren Erfahrung bieten wir maßgeschneiderte integrierte Lösungen für Reinigung, Wartung und Facility Management",
@@ -215,5 +273,45 @@
     "title": "Häufige Fragen",
     "subtitle": "Die Antworten, nach denen am häufigsten gefragt wird. Ihre Frage ist nicht dabei? Melden Sie sich einfach.",
     "eyebrow": "FAQ"
+  },
+  "corporateCatalog": {
+    "businessAreas": "Geschäftsbereiche",
+    "companies": "Unternehmen",
+    "projects": "Projekte",
+    "search": "Suchen",
+    "sector": "Geschäftsbereich",
+    "location": "Standort",
+    "reset": "Filter zurücksetzen",
+    "results": "{{count}} Ergebnisse",
+    "noResults": "Keine passenden Einträge. Passen Sie die Suche oder Filter an.",
+    "empty": "Inhalte werden ergänzt.",
+    "breadcrumb": "Brotkrümelnavigation",
+    "overview": "Überblick",
+    "focus": "Schwerpunkte",
+    "atGlance": "Auf einen Blick",
+    "related": "Gemeinsam mehr bewegen",
+    "website": "Website",
+    "newTab": "öffnet in einem neuen Tab"
+  },
+  "corporateBlog": {
+    "all": "Alle",
+    "read": "Lesen",
+    "emptyTitle": "Keine Blogbeiträge gefunden",
+    "emptyText": "Sobald Inhalte über die Blog-API verfügbar sind, erscheinen sie hier automatisch.",
+    "categories": "Blogkategorien"
+  },
+  "corporatePages": {
+    "page": "Seite",
+    "unternehmensgruppe": "Unternehmensgruppe",
+    "ueber-uns": "Über uns",
+    "karriere": "Karriere",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "contact": "Kontakt",
+    "empty": "Für diese Seite sind derzeit keine Inhalte verfügbar.",
+    "noCareers": "Derzeit sind keine Karriereinformationen verfügbar.",
+    "noForm": "Das Kontaktformular ist derzeit nicht verfügbar. Bitte nutzen Sie die angegebenen Kontaktmöglichkeiten.",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet …"
   }
 }

@@ -1,4 +1,62 @@
 {
+  "corporateHome": {
+    "eyebrow": "Ömer Dogan Company GmbH",
+    "title": "Connecting companies. Creating value. Shaping the future.",
+    "description": "Ömer Dogan Company GmbH develops, operates and connects companies in hospitality, real estate, services, trade and technology.",
+    "discover": "Discover our group",
+    "contact": "Get in touch",
+    "areasEyebrow": "Our business areas",
+    "areasTitle": "Diversity that connects us.",
+    "areasDescription": "Different capabilities. One shared ambition: developing companies for the long term.",
+    "companiesEyebrow": "Our company group",
+    "companiesTitle": "Independent. Stronger together.",
+    "companiesDescription": "People and companies with different strengths, connected by a shared perspective.",
+    "all": "All",
+    "details": "Explore more",
+    "projectsEyebrow": "Projects & investments",
+    "projectsTitle": "The future takes shape.",
+    "networkEyebrow": "International connections",
+    "networkTitle": "Locally rooted.\nConnected across Europe.",
+    "networkDescription": "Cooperation beyond borders. Our network brings local experience and entrepreneurial perspectives together.",
+    "visionEyebrow": "Our approach",
+    "visionTitle": "Thinking in connections.\nAnd in generations.",
+    "visionDescription": "We connect entrepreneurial independence with shared responsibility, creating room for ideas, long-term development and partnerships that last.",
+    "values": [
+      "Taking responsibility",
+      "Strengthening partnerships",
+      "Shaping the future"
+    ],
+    "careerEyebrow": "Careers",
+    "careerTitle": "Achieve more together.",
+    "careerDescription": "Bring your experience, ideas and perspective. Help us shape the next step.",
+    "careerButton": "Explore opportunities",
+    "contactEyebrow": "Let’s talk",
+    "contactTitle": "What can we achieve together?",
+    "contactDescription": "An idea, a partnership or a fresh perspective – we look forward to hearing from you.",
+    "play": "Play video",
+    "videoError": "The video is currently unavailable.",
+    "sectorCount": "Connected companies",
+    "back": "Back to home",
+    "metricsLabel": "Company group figures",
+    "areas": {
+      "hospitality": {
+        "title": "Hospitality",
+        "description": "Hotels, resorts and distinctive guest experiences."
+      },
+      "real-estate": {
+        "title": "Real estate & projects",
+        "description": "Properties and places with a long-term perspective."
+      },
+      "facility": {
+        "title": "Facility & industry",
+        "description": "Operational services for buildings, facilities and people."
+      },
+      "trade-technology": {
+        "title": "Trade & technology",
+        "description": "Connecting international markets and digital opportunities."
+      }
+    }
+  },
   "hero": {
     "title": "Your reliable partner in accommodation and facility management",
     "subtitle": "With over 25 years of experience, we offer custom-integrated solutions for cleaning, maintenance, and facility management",
@@ -34,6 +92,7 @@
     "meta_title": "Our Services - O&I CLEAN group GmbH",
     "meta_description": "Professional cleaning, renovation, and facility management.",
     "loading": "Loading…",
+    "no_services": "No services are available.",
     "contact_cta": "Contact us",
     "contact_cta_aria": "Contact us now"
   },
@@ -214,5 +273,45 @@
     "title": "Frequently asked questions",
     "subtitle": "The answers we are asked for most often. Question not covered? Just get in touch.",
     "eyebrow": "FAQ"
+  },
+  "corporateCatalog": {
+    "businessAreas": "Business areas",
+    "companies": "Companies",
+    "projects": "Projects",
+    "search": "Search",
+    "sector": "Business area",
+    "location": "Location",
+    "reset": "Reset filters",
+    "results": "{{count}} results",
+    "noResults": "No matching entries. Adjust your search or filters.",
+    "empty": "Content will be added here.",
+    "breadcrumb": "Breadcrumb",
+    "overview": "Overview",
+    "focus": "Our focus",
+    "atGlance": "At a glance",
+    "related": "Connected perspectives",
+    "website": "Website",
+    "newTab": "opens in a new tab"
+  },
+  "corporateBlog": {
+    "all": "All",
+    "read": "Read",
+    "emptyTitle": "No blog posts found",
+    "emptyText": "Posts will appear here when they are available through the blog API.",
+    "categories": "Blog categories"
+  },
+  "corporatePages": {
+    "page": "Page",
+    "unternehmensgruppe": "Our group",
+    "ueber-uns": "About us",
+    "karriere": "Careers",
+    "impressum": "Legal notice",
+    "datenschutz": "Privacy",
+    "contact": "Contact",
+    "empty": "No content is currently available for this page.",
+    "noCareers": "Career information is currently unavailable.",
+    "noForm": "The contact form is currently unavailable. Please use the contact details provided.",
+    "send": "Send message",
+    "sending": "Sending …"
   }
 }

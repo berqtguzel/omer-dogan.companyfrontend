@@ -1,4 +1,62 @@
 {
+  "corporateHome": {
+    "eyebrow": "Ömer Dogan Company GmbH",
+    "title": "Şirketleri birleştiriyoruz. Değer yaratıyoruz. Geleceği şekillendiriyoruz.",
+    "description": "Ömer Dogan Company GmbH; hospitality, gayrimenkul, hizmetler, ticaret ve teknoloji alanlarında şirketler geliştirir, işletir ve birbirine bağlar.",
+    "discover": "Şirketler grubunu keşfedin",
+    "contact": "İletişime geçin",
+    "areasEyebrow": "Faaliyet alanlarımız",
+    "areasTitle": "Bizi birleştiren çeşitlilik.",
+    "areasDescription": "Farklı uzmanlıklar. Ortak bir hedef: şirketleri uzun vadeli geliştirmek.",
+    "companiesEyebrow": "Şirketler grubu",
+    "companiesTitle": "Bağımsız. Birlikte daha güçlü.",
+    "companiesDescription": "Farklı güçlü yönleri olan insanlar ve şirketler, ortak bir bakış açısıyla bir arada.",
+    "all": "Tümü",
+    "details": "Daha fazla bilgi",
+    "projectsEyebrow": "Projeler & yatırımlar",
+    "projectsTitle": "Gelecek şekilleniyor.",
+    "networkEyebrow": "Uluslararası iş birliği",
+    "networkTitle": "Yerel kökler.\nAvrupa çapında bağlantılar.",
+    "networkDescription": "Sınırları aşan iş birliği. Ağımız, yerel deneyimi girişimci bakış açılarıyla bir araya getiriyor.",
+    "visionEyebrow": "Yaklaşımımız",
+    "visionTitle": "Bağlantıları düşünüyoruz.\nVe gelecek nesilleri.",
+    "visionDescription": "Girişimci bağımsızlığını ortak sorumlulukla birleştiriyoruz. Fikirlere, uzun vadeli gelişime ve kalıcı ortaklıklara alan açıyoruz.",
+    "values": [
+      "Sorumluluk almak",
+      "Ortaklıkları güçlendirmek",
+      "Geleceği şekillendirmek"
+    ],
+    "careerEyebrow": "Kariyer",
+    "careerTitle": "Birlikte daha fazlası.",
+    "careerDescription": "Deneyiminizi, fikirlerinizi ve bakış açınızı paylaşın. Bir sonraki adımı birlikte şekillendirelim.",
+    "careerButton": "Fırsatları keşfedin",
+    "contactEyebrow": "Diyalog",
+    "contactTitle": "Birlikte neleri başarabiliriz?",
+    "contactDescription": "Bir fikir, ortaklık veya yeni bir bakış açısı – sizinle görüşmeyi bekliyoruz.",
+    "play": "Videoyu oynat",
+    "videoError": "Video şu anda kullanılamıyor.",
+    "sectorCount": "Bağlı şirketler",
+    "back": "Ana sayfaya dön",
+    "metricsLabel": "Şirketler grubunun sayısal verileri",
+    "areas": {
+      "hospitality": {
+        "title": "Hospitality",
+        "description": "Oteller, resortlar ve özgün konaklama deneyimleri."
+      },
+      "real-estate": {
+        "title": "Gayrimenkul & Projeler",
+        "description": "Uzun vadeli bakış açısıyla gayrimenkuller ve lokasyonlar."
+      },
+      "facility": {
+        "title": "Facility & Industry",
+        "description": "Binalar, tesisler ve insanlar için operasyonel hizmetler."
+      },
+      "trade-technology": {
+        "title": "Ticaret & Teknoloji",
+        "description": "Uluslararası pazarlar ve dijital olanaklar."
+      }
+    }
+  },
   "hero": {
     "title": "Konaklama ve bina yönetiminde güvenilir iş ortağınız",
     "subtitle": "25 yılı aşkın deneyimimizle temizlik, bakım ve tesis yönetimi için ihtiyaca özel entegre çözümler sunuyoruz",
@@ -34,6 +92,7 @@
     "meta_title": "Hizmetlerimiz - O&I CLEAN group GmbH",
     "meta_description": "Profesyonel temizlik, tadilat ve bina yönetimi.",
     "loading": "Yükleniyor…",
+    "no_services": "Kullanılabilir hizmet bulunmuyor.",
     "contact_cta": "Bizimle iletişime geçin",
     "contact_cta_aria": "Hemen iletişime geçin"
   },
@@ -214,5 +273,45 @@
     "title": "Sıkça sorulan sorular",
     "subtitle": "En çok merak edilenlerin yanıtları. Sorunuz burada yoksa bize ulaşmanız yeterli.",
     "eyebrow": "SSS"
+  },
+  "corporateCatalog": {
+    "businessAreas": "Faaliyet alanları",
+    "companies": "Şirketler",
+    "projects": "Projeler",
+    "search": "Ara",
+    "sector": "Faaliyet alanı",
+    "location": "Konum",
+    "reset": "Filtreleri temizle",
+    "results": "{{count}} sonuç",
+    "noResults": "Eşleşen içerik yok. Arama veya filtreleri değiştirin.",
+    "empty": "İçerikler yakında eklenecek.",
+    "breadcrumb": "Sayfa yolu",
+    "overview": "Genel bakış",
+    "focus": "Odak noktaları",
+    "atGlance": "Bir bakışta",
+    "related": "Birlikte değer üretiyoruz",
+    "website": "Web sitesi",
+    "newTab": "yeni sekmede açılır"
+  },
+  "corporateBlog": {
+    "all": "Tümü",
+    "read": "Oku",
+    "emptyTitle": "Blog yazısı bulunamadı",
+    "emptyText": "Blog API üzerinden içerik sağlandığında yazılar burada görünecektir.",
+    "categories": "Blog kategorileri"
+  },
+  "corporatePages": {
+    "page": "Sayfa",
+    "unternehmensgruppe": "Şirketler grubu",
+    "ueber-uns": "Hakkımızda",
+    "karriere": "Kariyer",
+    "impressum": "Şirket bilgileri",
+    "datenschutz": "Gizlilik",
+    "contact": "İletişim",
+    "empty": "Bu sayfa için henüz içerik bulunmuyor.",
+    "noCareers": "Şu anda kariyer bilgisi bulunmuyor.",
+    "noForm": "İletişim formu şu anda kullanılamıyor. Lütfen belirtilen iletişim kanallarını kullanın.",
+    "send": "Mesaj gönder",
+    "sending": "Gönderiliyor …"
   }
 }

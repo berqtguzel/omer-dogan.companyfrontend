@@ -30,6 +30,16 @@ class BlogController extends Controller
     public function index()
     {
         $locale = $this->locale();
+        if (! config('corporate_home.content_ready')) {
+            return Inertia::render('Blog/Index', [
+                'locale' => $locale,
+                'page' => null,
+                'posts' => [],
+                'categories' => [],
+                'selectedCategory' => null,
+                'pagination' => [],
+            ]);
+        }
         $category = trim((string) request('category'));
         $response = $this->fetchPosts($locale, $category ?: null);
         $page = StaticPageController::getPage($locale, 'blog');
@@ -46,6 +56,7 @@ class BlogController extends Controller
 
     public function show()
     {
+        abort_unless(config('corporate_home.content_ready'), 404);
         $localeCandidate = request()->route('locale');
         $identifier = request()->route('slug');
         $category = request()->route('category');

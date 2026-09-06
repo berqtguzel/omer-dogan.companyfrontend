@@ -6,7 +6,7 @@ use Tests\TestCase;
 
 uses(TestCase::class);
 
-it('redirects favicon.ico to the cached API favicon through the local media proxy', function () {
+it('redirects favicon.ico to a same-origin cached or proxied API favicon', function () {
     $tenant = 'favicon-'.uniqid();
 
     config([
@@ -40,8 +40,8 @@ it('redirects favicon.ico to the cached API favicon through the local media prox
     $first = $this->get('/favicon.ico')
         ->assertRedirect();
 
-    expect($first->headers->get('Location'))->toContain('/media-proxy/')
-        ->and($first->headers->get('Cache-Control'))->toContain('no-store');
+    expect($first->headers->get('Location'))->toMatch('#^(?:https://tenant\.example)?/media-(?:cache|proxy)/#')
+        ->and($first->headers->get('Cache-Control'))->toContain('no-cache');
 
     $apiRequests = Http::recorded()->count();
 

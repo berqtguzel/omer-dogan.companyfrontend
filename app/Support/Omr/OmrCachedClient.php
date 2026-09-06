@@ -35,22 +35,16 @@ final class OmrCachedClient
         $stale = Cache::get($staleKey);
 
         $snapshot = self::readSnapshot($cacheKey);
-
-        if (is_array($snapshot)) {
-            Cache::put($cacheKey, $snapshot, $options['success_ttl'] ?? now()->addHours(6));
-            Cache::put($staleKey, $snapshot, $options['stale_ttl'] ?? now()->addDays(2));
-
-            return self::result($snapshot);
-        }
+        $fallback = is_array($stale) ? $stale : $snapshot;
 
         if (self::isCoolingDown($tenant)) {
-            return self::result($stale);
+            return self::result($fallback);
         }
 
         try {
             return Cache::lock($lockKey, (int) ($options['lock_seconds'] ?? 20))->block(
                 (int) ($options['block_seconds'] ?? 4),
-                function () use ($cacheKey, $staleKey, $stale, $namespace, $path, $query, $tenant, $options) {
+                function () use ($cacheKey, $staleKey, $fallback, $namespace, $path, $query, $tenant, $options) {
                     $cachedAgain = Cache::get($cacheKey, self::MISSING);
 
                     if ($cachedAgain !== self::MISSING) {
@@ -58,7 +52,7 @@ final class OmrCachedClient
                     }
 
                     if (self::isCoolingDown($tenant)) {
-                        return self::result($stale);
+                        return self::result($fallback);
                     }
 
                     $result = self::fetch($namespace, $path, $query, $tenant, $options);
@@ -73,7 +67,7 @@ final class OmrCachedClient
 
                     Cache::put($cacheKey, $result, self::failureTtl($result['status'] ?? null, $options));
 
-                    return is_array($stale) ? self::result($stale) : $result;
+                    return is_array($fallback) ? self::result($fallback) : $result;
                 }
             );
         } catch (\Throwable $e) {
@@ -84,7 +78,7 @@ final class OmrCachedClient
                 'error' => $e->getMessage(),
             ]);
 
-            return self::result($stale);
+            return self::result($fallback);
         }
     }
 

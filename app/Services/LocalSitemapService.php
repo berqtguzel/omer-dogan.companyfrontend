@@ -37,7 +37,9 @@ final class LocalSitemapService
             throw new EmptySitemapException('Unknown local sitemap module.');
         }
 
-        $paths = ['', '/reinigungsleistungen', '/kontakt', '/blog'];
+        // The local fallback must only advertise stable corporate entry points.
+        // Tenant-backed pages are supplied by CachedSitemapService once verified.
+        $paths = ['', '/kontakt'];
         $xml = '<?xml version="1.0" encoding="UTF-8"?>'."\n";
         $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
         foreach ($paths as $path) {

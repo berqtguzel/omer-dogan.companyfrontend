@@ -30,12 +30,6 @@ return [
         'analytics_enabled' => filter_var(env('OMR_ANALYTICS_ENABLED', true), FILTER_VALIDATE_BOOLEAN),
         'page_timing_enabled' => filter_var(env('OMR_PAGE_TIMING_ENABLED', true), FILTER_VALIDATE_BOOLEAN),
         'analytics_throttle_seconds' => (int) env('OMR_ANALYTICS_THROTTLE_SECONDS', 3600),
-        /**
-         * API'de içerik yoksa (yorumlar / SSS) yer tutucu demo içerik gösterilir.
-         * Panel doldurulduğunda demo otomatik olarak devre dışı kalır.
-         * Canlıda kapatmak için .env: OMR_DEMO_CONTENT=false
-         */
-        'demo_content' => filter_var(env('OMR_DEMO_CONTENT', true), FILTER_VALIDATE_BOOLEAN),
         /** Boşsa fallback kullanılır (config() ile okunmalı). */
         'tenant_id' => env('TENANT_ID', ''),
         'default_locale' => env('OMR_DEFAULT_LOCALE', 'de'),

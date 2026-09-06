@@ -69,6 +69,10 @@ class Handler extends ExceptionHandler
                     'status' => $statusCode,
                 ])->toResponse($request)->setStatusCode($statusCode);
             }
+
+            // Preserve authorization, throttling and validation HTTP status
+            // codes instead of converting them to an unrelated 500 page.
+            return parent::render($request, $e);
         }
 
         // ⚡ Diğer exception'lar için de 500 göster (production'da)

@@ -1,0 +1,50 @@
+.motion-reveal {
+    opacity: 0;
+    transform: translate3d(0, 2.5rem, 0);
+    transition:
+        opacity 700ms var(--ease-standard) var(--reveal-delay, 0ms),
+        transform 850ms var(--ease-standard) var(--reveal-delay, 0ms);
+}
+
+.motion-reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.group-area-card,
+.group-company-card,
+.group-project-card,
+.catalog-card {
+    transition: transform 420ms var(--ease-standard), box-shadow 420ms var(--ease-standard), border-color 240ms var(--ease-standard);
+}
+
+.group-area-card:hover,
+.group-company-card:hover,
+.group-project-card:hover,
+.catalog-card:hover {
+    transform: translateY(-0.55rem);
+    box-shadow: 0 1.5rem 3.5rem rgb(32 39 41 / 13%);
+}
+
+.group-media img {
+    transition: transform 900ms var(--ease-standard), filter 500ms var(--ease-standard);
+}
+
+:is(.group-area-card, .group-company-card, .group-project-card, .catalog-card):hover .group-media img {
+    transform: scale(1.055);
+}
+
+.corporate-button span,
+.group-text-link span:last-child {
+    transition: transform 240ms var(--ease-standard);
+}
+
+.corporate-button:hover span,
+.group-text-link:hover span:last-child {
+    transform: translate(0.2rem, -0.2rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .motion-reveal { opacity: 1; transform: none; }
+    .group-area-card:hover, .group-company-card:hover, .group-project-card:hover, .catalog-card:hover { transform: none; }
+}

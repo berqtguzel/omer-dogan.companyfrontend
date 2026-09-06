@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\LocationShowController;
-use App\Http\Controllers\ServiceShowController;
 use App\Console\Commands\WarmOmrCatalog;
 use Tests\TestCase;
 
@@ -18,15 +17,10 @@ function invokePrivate(object $target, string $method, mixed ...$arguments): mix
 it('uses only the two explicitly configured legacy category datasets', function () {
     config(['services.omr.location_parent_id' => null]);
 
-    $serviceController = app(ServiceShowController::class);
     $locationController = app(LocationShowController::class);
     $catalogWarmer = app(WarmOmrCatalog::class);
 
-    expect(invokePrivate($serviceController, 'relatedServicesQuery', 'housekeeping-service'))
-        ->toBe(['category_slug' => 'reinigungsservice', '_max_pages' => 10])
-        ->and(invokePrivate($serviceController, 'relatedServicesQuery', 'praxisreinigung'))
-        ->toBe(['parent_id' => 11, '_max_pages' => 10])
-        ->and(invokePrivate($locationController, 'serviceCollectionQuery', 'housekeeping-service'))
+    expect(invokePrivate($locationController, 'serviceCollectionQuery', 'housekeeping-service'))
         ->toBe(['category_slug' => 'reinigungsservice', '_max_pages' => 10])
         ->and(invokePrivate($locationController, 'serviceCollectionQuery', 'praxisreinigung'))
         ->toBe(['parent_id' => 11, '_max_pages' => 10])

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, usePage } from "@inertiajs/react";
+import { useTranslation } from "react-i18next";
 import AppLayout from "@/Layouts/AppLayout";
 import SeoHead from "@/Components/SeoHead";
 import {
@@ -49,16 +50,17 @@ const pageLabel = (page, translation, key, fallback = "") =>
     );
 
 export default function BlogIndex() {
+    const { t } = useTranslation();
     const {
         posts = [],
         categories = [],
         page,
         locale = "de",
         selectedCategory,
-        ziggy,
+        currentUrl,
         tenantSeo,
     } = usePage().props;
-    const base = localeBase(locale, ziggy?.location);
+    const base = localeBase(locale, currentUrl);
     const blogHref = `${base}/blog`;
     const normalizedLocale = normalizeLocale(locale);
     const pageTranslation = findTranslation(
@@ -87,24 +89,24 @@ export default function BlogIndex() {
         page?.label,
         "",
     );
-    const allLabel = pageLabel(page, pageTranslation, "all_label", "Alle");
+    const allLabel = pageLabel(page, pageTranslation, "all_label", t("corporateBlog.all"));
     const readLabel = pageLabel(
         page,
         pageTranslation,
         "read_more_label",
-        "Lesen",
+        t("corporateBlog.read"),
     );
     const emptyTitle = pageLabel(
         page,
         pageTranslation,
         "empty_title",
-        "Keine Blogbeitrage gefunden",
+        t("corporateBlog.emptyTitle"),
     );
     const emptyText = pageLabel(
         page,
         pageTranslation,
         "empty_text",
-        "Sobald Inhalte uber die Blog API verfugbar sind, erscheinen sie hier automatisch.",
+        t("corporateBlog.emptyText"),
     );
 
     return (
@@ -121,7 +123,7 @@ export default function BlogIndex() {
                 origin={tenantSeo?.canonicalBaseUrl}
             />
 
-            <main className="blog-page">
+            <div className="blog-page">
                 <section className="blog-hero">
                     <div className="blog-shell">
                         {eyebrow && <p className="blog-eyebrow">{eyebrow}</p>}
@@ -132,7 +134,7 @@ export default function BlogIndex() {
 
                         <div
                             className="blog-categories"
-                            aria-label="Blog categories"
+                            aria-label={t("corporateBlog.categories")}
                         >
                             {selectedCategory && (
                                 <Link
@@ -275,7 +277,7 @@ export default function BlogIndex() {
                         )}
                     </div>
                 </section>
-            </main>
+            </div>
         </AppLayout>
     );
 }

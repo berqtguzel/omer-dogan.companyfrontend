@@ -1,0 +1,33 @@
+/* Opt-in boundary while legacy pages migrate. No legacy selector overrides. */
+.corporate-site {
+    background: var(--surface-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    overflow-wrap: anywhere;
+    color-scheme: light;
+}
+
+.corporate-heading {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-weight: 650;
+    line-height: var(--line-height-heading);
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+}
+
+.corporate-heading--hero { font-size: var(--font-size-h1); }
+.corporate-heading--section { font-size: var(--font-size-h2); }
+.corporate-heading--card { font-size: var(--font-size-h3); }
+
+.corporate-site :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .corporate-site { scroll-behavior: auto; }
+}

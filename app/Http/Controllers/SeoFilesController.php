@@ -10,6 +10,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Http\Request;
 
 class SeoFilesController extends Controller
 {
@@ -21,6 +22,9 @@ class SeoFilesController extends Controller
 
     public function favicon(): Response|RedirectResponse
     {
+        if (! config('corporate_home.content_ready')) {
+            return response('', 204, ['Cache-Control' => 'no-store']);
+        }
         $tenant = OmrConfig::tenantId();
         $locale = OmrConfig::defaultLocale();
         $cacheKey = 'site_favicon_v1_'.$tenant.'_'.$this->canonicalUrls->cacheScope($tenant);
@@ -47,6 +51,15 @@ class SeoFilesController extends Controller
             return response('', 204, ['Cache-Control' => 'no-store']);
         }
 
+        if (str_starts_with($favicon, '/')) {
+            return response('', 302, [
+                'Location' => $favicon,
+                'Cache-Control' => 'no-cache, no-store, must-revalidate',
+                'Pragma' => 'no-cache',
+                'Expires' => '0',
+            ]);
+        }
+
         return redirect()->to($favicon, 302, [
             'Cache-Control' => 'no-cache, no-store, must-revalidate',
             'Pragma' => 'no-cache',
@@ -61,6 +74,12 @@ class SeoFilesController extends Controller
 
     public function robots(): Response
     {
+        if (! config('corporate_home.content_ready')) {
+            return response("User-agent: *\nDisallow: /\n", 200, [
+                'Content-Type' => 'text/plain; charset=UTF-8',
+                'Cache-Control' => 'no-store',
+            ]);
+        }
         $baseUrl = $this->canonicalUrls->baseUrl();
 
         if (! $baseUrl) {
@@ -135,13 +154,18 @@ class SeoFilesController extends Controller
         return $this->serve('ai_about_md');
     }
 
-    public function sync(): JsonResponse
+    public function sync(Request $request): JsonResponse
     {
+        $secret = (string) config('omr_warmup.webhook_secret');
+        abort_if($secret === '', 404);
+        abort_unless(hash_equals($secret, (string) $request->header('X-OMR-Warmup-Secret')), 403);
+
         return response()->json($this->seoFiles->syncAll(OmrConfig::tenantId()));
     }
 
     private function serve(string $type): Response
     {
+        abort_unless(config('corporate_home.content_ready'), 404);
         $file = $this->seoFiles->sync($type, OmrConfig::tenantId());
 
         abort_if($file === null, 404);

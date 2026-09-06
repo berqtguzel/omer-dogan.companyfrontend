@@ -1,0 +1,1 @@
+import{j as a}from"./motion-Bi2zF268.js";import"./icons-DRko-LUY.js";import{s as i,a as t}from"./safeParse-DFAe9CfB.js";function u({html:r,as:n="span",inline:e=!1,...s}){return typeof r!="string"&&typeof r!="number"||!r?null:a.jsx(n,{...s,suppressHydrationWarning:!0,children:i(e?t(r):r)})}export{u as S};

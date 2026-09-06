@@ -113,8 +113,9 @@ class CachedSitemapService
             $alternates = [];
 
             foreach ($translations as $translationLocale => $translation) {
-                $translationSlug = $this->translatedSlug($translation, $slug);
-                $alternates[$translationLocale] = $this->url('/'.$translationLocale.'/'.$this->pageRouteSlug($translationSlug));
+                $path = \App\Support\CorporateRoutes::configuredPath($slug)
+                    ?? '/'.$this->translatedSlug($translation, $slug);
+                $alternates[$translationLocale] = $this->url('/'.$translationLocale.'/'.$this->pageRouteSlug(trim($path, '/')));
             }
 
             $entries[] = [

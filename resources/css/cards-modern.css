@@ -12,17 +12,13 @@ html.dark {
 }
 
 /* --------------------------------------------------------------- sections */
-.svc-section,
+
 .services-section {
     border-bottom: 1px solid var(--ui-line);
     background: var(--ui-bg) !important;
 }
 
-.svc-section {
-    background: color-mix(in srgb, var(--ui-primary) 4%, var(--ui-bg) 96%) !important;
-}
 
-.svc-title,
 .services-title {
     max-width: 820px;
     margin-bottom: clamp(28px, 3.5vw, 46px);
@@ -40,16 +36,11 @@ html.dark {
 
 /* ------------------------------------------------------------------ grids */
 /* drop the hairline "table" look; cards sit on the section background now */
-.svc-grid,
+
 .services-grid {
     border: 0;
     background: transparent;
     counter-reset: none;
-}
-
-.svc-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
 }
 
 /* .services-section .services-grid keeps its own responsive column count
@@ -59,7 +50,7 @@ html.dark {
 }
 
 /* ------------------------------------------------------------------ cards */
-.svc-card,
+
 .service-card,
 .services-section .service-card {
     position: relative;
@@ -80,12 +71,12 @@ html.dark {
 }
 
 /* the accent number badge goes away — that was the loudest part */
-.svc-card::before,
+
 .services-section .service-card::before {
     content: none;
 }
 
-.svc-card:hover,
+
 .service-card:hover,
 .services-section .service-card:hover {
     transform: translateY(-4px);
@@ -94,7 +85,7 @@ html.dark {
 }
 
 /* ----------------------------------------------------------------- images */
-.svc-card-img-wrap,
+
 .services-section .service-card__image-wrapper,
 .service-card__image-wrapper {
     height: 208px;
@@ -104,7 +95,7 @@ html.dark {
     background: color-mix(in srgb, var(--ui-primary) 7%, var(--ui-bg) 93%);
 }
 
-.svc-card-img,
+
 .services-section .service-card__image,
 .service-card__image {
     width: 100%;
@@ -125,7 +116,7 @@ html.dark {
 }
 
 /* subtle zoom only — no saturation/contrast shift */
-.svc-card:hover .svc-card-img,
+
 .services-section .service-card:hover .service-card__image,
 .service-card:hover .service-card__image {
     transform: scale(1.04);
@@ -133,7 +124,7 @@ html.dark {
 }
 
 /* ------------------------------------------------------------------- body */
-.svc-card-body,
+
 .services-section .service-card__content,
 .service-card__content {
     display: flex;
@@ -146,7 +137,7 @@ html.dark {
     text-align: left;
 }
 
-.svc-card-title,
+
 .services-section .service-card__title,
 .services-section .service-card__title span,
 .service-card__title {
@@ -158,18 +149,6 @@ html.dark {
     line-height: 1.35;
     letter-spacing: -0.02em;
     text-transform: none;
-}
-
-.svc-card-desc {
-    display: -webkit-box;
-    overflow: hidden;
-    margin: 0;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    color: var(--ui-muted) !important;
-    font-size: 0.92rem;
-    line-height: 1.65;
 }
 
 /* --------------------------------------------------------------- cta link */
@@ -211,9 +190,8 @@ html.dark {
 
 /* app.css pins card backgrounds to hsl(var(--card)) with a later, equal-weight
    rule — this outranks it so the surface keeps tracking the panel theme */
-.svc-grid .svc-card,
+
 .services-grid .service-card,
-.dark .svc-grid .svc-card,
 .dark .services-grid .service-card {
     border-color: var(--ui-line);
     background-color: var(--ui-surface);
@@ -221,11 +199,11 @@ html.dark {
 
 /* -------------------------------------------------------------- responsive */
 @media (max-width: 1024px) {
-    .svc-grid,
+
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .svc-card-img-wrap,
+
     .services-section .service-card__image-wrapper,
     .service-card__image-wrapper {
         height: 200px;
@@ -234,28 +212,28 @@ html.dark {
 }
 
 @media (max-width: 640px) {
-    .svc-grid,
+
     .services-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
-    .svc-card,
+
     .service-card,
     .services-section .service-card {
         border-radius: 19px;
     }
-    .svc-card-img-wrap,
+
     .services-section .service-card__image-wrapper,
     .service-card__image-wrapper {
         height: 210px;
         min-height: 210px;
     }
-    .svc-card-body,
+
     .services-section .service-card__content,
     .service-card__content {
         padding: 20px;
     }
-    .svc-title,
+
     .services-title {
         padding-left: 0;
         border-left: 0;
@@ -264,9 +242,8 @@ html.dark {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .svc-card,
+
     .service-card,
-    .svc-card-img,
     .service-card__image,
     .service-card__arrow {
         transition: none !important;

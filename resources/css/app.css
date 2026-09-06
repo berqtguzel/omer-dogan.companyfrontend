@@ -4,17 +4,10 @@
 
 /* Above-the-fold layout — head'de yüklenir, FOUC önlenir */
 @import './critical.css';
-@import './header.css';
-@import './Footer.css';
-@import './HeroSection.css';
 @import './ServicesGrid.css';
 @import './ServiceCard.css';
-@import './ServiceCategories.css';
-@import './language-switcher.css';
 @import './redesign.css';
 @import './cards-modern.css';
-@import './ReviewsSection.css';
-@import './HomeFaqSection.css';
 
 /* ===================
    🎨 Theme Variables
@@ -100,7 +93,7 @@ html.inertia-loading body {
 }
 
 /* Cards & panels auto theme support */
-.svc-card,
+
 .service-card,
 .odock__panel,
 .drawer__panel,
@@ -138,7 +131,7 @@ html.inertia-loading body {
    when the browser moves them in and out of the rendering viewport. */
 
 /* Reduce layout shifts */
-.hero-bg,
+
 .service-card__image {
     aspect-ratio: attr(width) / attr(height);
 }

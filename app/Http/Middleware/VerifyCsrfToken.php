@@ -13,5 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '*/contact/forms/*/submit',
+        '_seo-files/sync',
     ];
 }

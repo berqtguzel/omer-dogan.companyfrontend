@@ -14,7 +14,13 @@ class ApplyLocale
         $locale = $request->route('locale')
             ?? session('locale', config('app.locale', 'de'));
         $locale = LocaleMapper::toWeb($locale);
+        if (! config('corporate_home.content_ready')) {
+            abort_unless(in_array($locale, config('corporate_home.locales', ['de']), true), 404);
+            app()->setLocale($locale);
+            session(['locale' => $locale]);
 
+            return $next($request);
+        }
         $tenantId = OmrConfig::tenantForSharedContent();
 
         // Network/cache failures must not make otherwise supported locale

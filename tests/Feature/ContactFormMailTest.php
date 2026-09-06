@@ -61,4 +61,17 @@ class ContactFormMailTest extends TestCase
         $this->assertStringContainsString('#fbbf24', $html);
         $this->assertStringContainsString('color:#172033', $html);
     }
+
+    public function test_contact_mail_removes_line_breaks_from_the_subject_name(): void
+    {
+        $mail = new ContactFormMail([
+            'name' => "Example\r\nBcc: injected@example.test",
+            'email' => 'sender@example.test',
+            'message' => 'Test',
+        ]);
+
+        $subject = $mail->build()->subject;
+        $this->assertStringNotContainsString("\r", $subject);
+        $this->assertStringNotContainsString("\n", $subject);
+    }
 }

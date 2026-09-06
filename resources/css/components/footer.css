@@ -1,0 +1,23 @@
+.corporate-footer { background: var(--surface-dark); color: var(--text-inverse); padding-top: var(--section-spacing); }
+.corporate-footer a { color: inherit; text-decoration: none; }
+.corporate-footer a:hover { text-decoration: underline; text-underline-offset: 0.3em; }
+.corporate-footer__intro { display: grid; gap: var(--space-8); padding-bottom: var(--space-12); border-bottom: 1px solid color-mix(in srgb, var(--text-inverse) 22%, transparent); }
+.corporate-footer__description { max-width: 48ch; margin-top: var(--space-6); color: color-mix(in srgb, var(--text-inverse) 75%, transparent); }
+.corporate-footer__cta { display: inline-flex; align-items: center; justify-content: space-between; gap: var(--space-8); align-self: start; justify-self: start; border-bottom: 1px solid var(--brand-accent); padding-block: var(--space-3); font-family: var(--font-heading); font-size: var(--font-size-h3); }
+.corporate-footer__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-8); padding-block: var(--space-12); }
+.corporate-footer__heading { color: var(--text-inverse); font-family: var(--font-heading); font-size: var(--font-size-body); font-weight: 600; margin: 0 0 var(--space-6); }
+.corporate-footer__links { list-style: none; margin: 0; padding: 0; font-size: var(--font-size-small); }
+.corporate-footer__links a { display: inline-block; padding-block: var(--space-2); }
+.corporate-footer__links .corporate-footer__links { padding-left: var(--space-4); }
+.corporate-footer__address { display: grid; gap: var(--space-3); font-style: normal; font-size: var(--font-size-small); }
+.corporate-footer__bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block: var(--space-6); border-top: 1px solid color-mix(in srgb, var(--text-inverse) 22%, transparent); }
+.corporate-footer__social { display: flex; flex-wrap: wrap; gap: var(--space-4); margin: 0; padding: 0; list-style: none; font-size: var(--font-size-small); }
+.corporate-footer__social a { display: inline-block; padding-block: var(--space-2); }
+@media (min-width: 40rem) {
+    .corporate-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 60rem) {
+    .corporate-footer__intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .corporate-footer__cta { justify-self: end; }
+    .corporate-footer__grid { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
+}

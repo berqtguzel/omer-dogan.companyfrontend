@@ -2,8 +2,11 @@ import React, { useEffect, useState, memo } from "react";
 import { Head, usePage } from "@inertiajs/react";
 import SeoHead from "@/Components/SeoHead";
 import TrackingHead from "@/Components/TrackingHead";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Header from "@/Components/Navigation/Header";
+import Footer from "@/Components/Navigation/Footer";
+import { corporateTheme } from "@/utils/corporateTheme";
+import { navigationLabels } from "@/i18n/navigation";
+import { useTranslation } from 'react-i18next';
 import CookieBanner from "../Components/CookieBanner";
 import Cookies from "js-cookie";
 import WhatsAppWidget from "@/Components/WhatsAppWidget";
@@ -11,94 +14,19 @@ import Loading from "@/Components/Common/Loading";
 import QuoteModal from "@/Components/Modals/QuoteModal";
 import { renderText, renderUrl } from "@/utils/renderValue";
 
-/* ---------------------------------------------------------------------------
- * Panelden gelen header/footer zemin rengi her tenant'ta farklı olabiliyor
- * (beyaz da olabilir, koyu bir marka rengi de). Yazı rengini sabitlemek yerine
- * zeminin parlaklığından hesaplıyoruz; böylece her renkte okunur kalıyor.
- * ------------------------------------------------------------------------- */
-
-function parseColor(value) {
-    const input = String(value || "").trim();
-
-    const hex = input.replace(/^#/, "");
-    if (/^[0-9a-f]{3}$/i.test(hex)) {
-        return hex.split("").map((c) => parseInt(c + c, 16));
-    }
-    if (/^[0-9a-f]{6}$/i.test(hex)) {
-        return [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16));
-    }
-
-    const rgb = input.match(/rgba?\(\s*([\d.]+)[\s,]+([\d.]+)[\s,]+([\d.]+)/i);
-    if (rgb) {
-        return [1, 2, 3].map((i) => Number(rgb[i]));
-    }
-
-    return null;
-}
-
-/** WCAG bağıl parlaklık (0 = siyah, 1 = beyaz). */
-function relativeLuminance(rgb) {
-    const [r, g, b] = rgb.map((channel) => {
-        const c = Math.min(255, Math.max(0, channel)) / 255;
-        return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
-    });
-
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-}
-
-/**
- * Bir yüzey rengi için okunur yazı/çizgi/vurgu değişkenleri üretir.
- * Zemin açıksa marka rengi vurgu olarak kullanılabilir; koyuysa beyaza geçer.
- */
-function surfaceInkVars(prefix, background, brand) {
-    const rgb = parseColor(background);
-
-    if (!rgb) return {};
-
-    const isLight = relativeLuminance(rgb) > 0.45;
-
-    return isLight
-        ? {
-              [`--${prefix}-ink`]: "",
-              [`--${prefix}-ink-muted`]: "",
-              [`--${prefix}-line`]: "",
-              [`--${prefix}-soft`]: "",
-              [`--${prefix}-accent`]: brand || "",
-          }
-        : {
-              [`--${prefix}-ink`]: "#ffffff",
-              [`--${prefix}-ink-muted`]: "rgba(255,255,255,.72)",
-              [`--${prefix}-line`]: "rgba(255,255,255,.24)",
-              [`--${prefix}-soft`]: "rgba(255,255,255,.16)",
-              [`--${prefix}-accent`]: "#ffffff",
-          };
-}
-
 const AppLayout = memo(function AppLayout({ children }) {
     const { props, component } = usePage();
+    const { t } = useTranslation();
 
     const locale = props.locale || "de";
-    const tenantId = props.tenantId || "";
     const settings = props.settings ?? {};
-    const menus = props.menus ?? {};
-    const global = props.global ?? {};
+    const site = props.siteShell;
+    const labels = navigationLabels(locale);
     const general = settings.general ?? {};
     const seo = settings.seo ?? {};
     const branding = settings.branding ?? {};
     const colors = settings.colors ?? {};
     const analytics = settings.analytics ?? {};
-
-    const headerMenu = Array.isArray(menus?.header?.items)
-        ? menus.header.items
-        : Array.isArray(menus?.header)
-          ? menus.header
-          : [];
-
-    const footerMenu = Array.isArray(menus?.footer?.items)
-        ? menus.footer.items
-        : Array.isArray(menus?.footer)
-          ? menus.footer
-          : [];
 
     const siteTitle = renderText(
         seo.meta_title,
@@ -114,6 +42,7 @@ const AppLayout = memo(function AppLayout({ children }) {
     const ogImage = renderUrl(seo.og_image);
     const pageOwnsSeo = [
         "Home",
+        "Corporate/Catalog",
         "StaticPage",
         "Services/Index",
         "Services/Show",
@@ -166,31 +95,26 @@ const AppLayout = memo(function AppLayout({ children }) {
             root.style.setProperty(`--${key.replace(/_/g, "-")}`, colors[key]);
         });
 
-        // header/footer zeminine göre okunur yazı rengi
-        const inkVars = {
-            ...surfaceInkVars(
-                "header",
-                colors.header_background_color,
-                colors.site_primary_color,
-            ),
-            ...surfaceInkVars(
-                "footer",
-                colors.footer_background_color,
-                colors.site_primary_color,
-            ),
-        };
-
-        Object.entries(inkVars).forEach(([name, value]) => {
-            if (value) {
-                root.style.setProperty(name, value);
-            } else {
-                root.style.removeProperty(name);
-            }
-        });
     }, [colors]);
 
     const [isClient, setIsClient] = useState(false);
     useEffect(() => setIsClient(true), []);
+
+    useEffect(() => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+        const targets = document.querySelectorAll('.corporate-main :is(.corporate-section, .catalog-heading, .corporate-document, .group-area-card, .group-company-card, .group-project-card)');
+        targets.forEach((target, index) => {
+            target.classList.add('motion-reveal');
+            target.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 70}ms`);
+        });
+        const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        }), { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        targets.forEach((target) => observer.observe(target));
+        return () => observer.disconnect();
+    }, [component, props.currentUrl]);
 
     const [showCookieSettings, setShowCookieSettings] = useState(false);
     useEffect(() => {
@@ -239,25 +163,24 @@ const AppLayout = memo(function AppLayout({ children }) {
             </Head>}
             <TrackingHead analytics={analytics} />
 
-            <div className="site-shell min-h-screen flex flex-col" style={rootStyles}>
-                <Header menu={headerMenu} settings={settings} />
-                <main className="flex-grow relative z-10">{children}</main>
-                <Footer menu={footerMenu} settings={settings} />
+            <div className="corporate-site corporate-shell" style={{ ...rootStyles, ...corporateTheme(colors) }}>
+                <a href="#main-content" className="corporate-skip">{labels.skip}</a>
+                {site && <Header site={site} labels={labels} locale={locale} languages={props.languages || []} />}
+                <main id="main-content" tabIndex={-1} className="corporate-main">{children}</main>
+                {site && <Footer site={site} labels={labels} year={props.currentYear} />}
             </div>
 
             {isClient && (
                 <>
                     <Loading style={rootStyles} />
-                    <QuoteModal style={rootStyles} />
-
+                    {component.startsWith('Services/') && <QuoteModal style={rootStyles} />}
                     <CookieBanner
                         style={rootStyles}
                         forceVisible={showCookieSettings}
                         onClose={() => setShowCookieSettings(false)}
                     />
 
-                    {/* 🔥 ARTIK ASLA PATLAMAZ */}
-                    <WhatsAppWidget style={rootStyles} data={whatsappData} />
+                    {component !== 'Home' && <WhatsAppWidget style={rootStyles} data={whatsappData} />}
                 </>
             )}
         </>

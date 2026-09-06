@@ -7,7 +7,7 @@ use Tests\TestCase;
 
 uses(TestCase::class);
 
-it('keeps the contact form visible and briefly caches fallback fields when the API fails', function () {
+it('does not invent a form id when no confirmed form exists', function () {
     $tenant = 'contact-fallback-'.uniqid();
     config([
         'cache.default' => 'array',
@@ -21,10 +21,18 @@ it('keeps the contact form visible and briefly caches fallback fields when the A
     $first = ContactFormController::getForms('de')->values()->all();
     $second = ContactFormController::getForms('de')->values()->all();
 
-    expect($first)->toHaveCount(1)
-        ->and($first[0]['id'])->toBe(1)
-        ->and(collect($first[0]['fields'])->pluck('name')->all())
-        ->toBe(['field_0', 'field_1', 'field_2', 'field_3'])
+    expect($first)->toBe([])
         ->and($second)->toBe($first)
         ->and(Http::recorded())->toHaveCount(1);
+});
+
+it('keeps confirmed legacy stale form records during upstream failure', function () {
+    config(['cache.default' => 'array', 'services.omr.main_tenant' => 'form-stale', 'services.omr.tenant_id' => 'form-stale']);
+    Cache::flush();
+    $forms = [['id' => 42, 'name' => 'Contact', 'fields' => [['name' => 'field_0', 'type' => 'text']]]];
+    Cache::put('contact_forms_v2_stale_form-stale_de', $forms, 300);
+    Http::fake(['*' => Http::response([], 503)]);
+    expect(ContactFormController::getForms('de')->all())->toBe($forms);
+    expect(ContactFormController::getForms('de')->all())->toBe($forms);
+    Http::assertSentCount(1);
 });

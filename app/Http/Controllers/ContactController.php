@@ -22,9 +22,11 @@ class ContactController extends Controller
     public function index()
     {
         $locale = strtolower((string) (request()->route('locale') ?: OmrConfig::defaultLocale()));
-
         return inertia('kontakt/index', [
-            'forms' => ContactFormController::getForms($locale)->values()->all(),
+            'locale' => $locale,
+            'forms' => config('corporate_home.content_ready')
+                ? ContactFormController::getForms($locale)->values()->all()
+                : [],
         ]);
     }
 

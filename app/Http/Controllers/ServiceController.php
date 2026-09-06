@@ -20,6 +20,14 @@ class ServiceController extends Controller
 
         $locale = LocaleMapper::toWeb($locale);
 
+        if (! config('corporate_home.content_ready')) {
+            $prefixed = LocaleMapper::isSupportedWeb(request()->segment(1));
+            $target = ($prefixed ? '/'.$locale : '').'/geschaeftsbereiche';
+            $query = request()->getQueryString();
+
+            return redirect()->to($target.($query ? '?'.$query : ''), 301);
+        }
+
         app()->setLocale($locale);
         session(['locale' => $locale]);
 

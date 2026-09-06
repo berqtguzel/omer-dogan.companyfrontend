@@ -37,8 +37,8 @@ const localeBase = (locale = "de", location = "") => {
 };
 
 export default function BlogShow() {
-    const { post, relatedPosts = [], locale = "de", ziggy, tenantSeo } = usePage().props;
-    const base = localeBase(locale, ziggy?.location);
+    const { post, relatedPosts = [], locale = "de", currentUrl, tenantSeo } = usePage().props;
+    const base = localeBase(locale, currentUrl);
     const faq = post?.faq || { title: "", items: [] };
     const articleImage = buildResponsiveImage(post?.image, {
         widths: [480, 768, 1040],
@@ -72,7 +72,7 @@ export default function BlogShow() {
                 </Head>
             )}
 
-            <main className="blog-page blog-page--show">
+            <div className="blog-page blog-page--show">
                 <section className="blog-article-hero">
                     <div className="blog-shell">
                         <div className="blog-article-hero__inner">
@@ -159,7 +159,7 @@ export default function BlogShow() {
                         </div>
                     </section>
                 )}
-            </main>
+            </div>
         </AppLayout>
     );
 }

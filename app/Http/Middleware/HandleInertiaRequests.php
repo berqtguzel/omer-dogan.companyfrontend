@@ -4,15 +4,14 @@ namespace App\Http\Middleware;
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LanguagesController;
-use App\Http\Controllers\MenuController;
-use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\WidgetController;
 use App\Services\TenantCanonicalUrlResolver;
+use App\Services\GlobalSiteDataService;
+use App\Data\SiteShellData;
 use App\Support\OmrConfig;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Inertia\Middleware;
-use Tighten\Ziggy\Ziggy;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -30,14 +29,6 @@ class HandleInertiaRequests extends Middleware
         }
 
         return Cache::has($this->cooldownKey($tenant));
-    }
-
-    private function emptyMenus(): array
-    {
-        return [
-            'header' => [],
-            'footer' => [],
-        ];
     }
 
     private function emptyWidgets(): array
@@ -75,19 +66,27 @@ class HandleInertiaRequests extends Middleware
 
         $locale = strtolower((string) $locale);
         $canonicalResolver = app(TenantCanonicalUrlResolver::class);
-        $canonicalBaseUrl = $canonicalResolver->baseUrl($tenantId);
-        $canonicalUrl = $canonicalResolver->url($request->getPathInfo(), $locale, $tenantId);
+        $ready = (bool) config('corporate_home.content_ready');
+        $canonicalBaseUrl = $ready ? $canonicalResolver->baseUrl($tenantId) : '';
+        $canonicalUrl = $ready ? $canonicalResolver->url($request->getPathInfo(), $locale, $tenantId) : '';
 
         session(['locale' => $locale]);
 
         $isCoolingDown = fn (): bool => $this->isOmrCoolingDown($mainTenant);
+        $siteData = app(GlobalSiteDataService::class);
+        $prefixed = \App\Support\LocaleMapper::isSupportedWeb($request->segment(1));
 
-        $langData = $isCoolingDown()
+        $langData = ! $ready ? [
+            'languages' => collect(config('corporate_home.locales', ['de']))
+                ->map(fn ($code) => ['code' => $code, 'name' => strtoupper($code)])->all(),
+            'defaultCode' => 'de',
+        ] : ($isCoolingDown()
             ? $this->fallbackLanguages($locale)
-            : LanguagesController::getLanguages($tenantId, $locale);
+            : LanguagesController::getLanguages($tenantId, $locale));
 
         return array_merge(parent::share($request), [
             'locale' => $locale,
+            'corporateReady' => $ready,
             'tenantId' => $tenantId,
             'currentYear' => (int) date('Y'),
             'languages' => $langData['languages'] ?? [],
@@ -100,32 +99,29 @@ class HandleInertiaRequests extends Middleware
 
             // SettingsController already handles fresh/stale API data. Do not
             // erase contact details merely because another OMR call hit cooldown.
-            'settings' => fn () => SettingsController::getFrontendSettings($tenantId, $locale),
+            'settings' => fn () => $siteData->settings($locale),
 
-            'menus' => fn () => $isCoolingDown()
-                ? $this->emptyMenus()
-                : [
-                    'header' => MenuController::getFrontendHeaderMenu($locale),
-                    'footer' => MenuController::getFrontendFooterMenu($locale),
-                ],
+            'menus' => fn () => $siteData->menus($locale),
+            'siteShell' => fn () => SiteShellData::from(
+                $siteData->settings($locale), $siteData->menus($locale),
+                $locale, $prefixed, $canonicalBaseUrl,
+            ),
 
             'global' => [
                 'locale' => $locale,
                 'languages' => $langData['languages'] ?? [],
                 'defaultLang' => $langData['defaultCode'] ?? 'de',
 
-                'categories' => fn () => $isCoolingDown()
+                'categories' => fn () => ! $ready || $isCoolingDown()
                     ? []
                     : CategoryController::getNavigationCategories($locale),
 
-                'widgets' => fn () => $isCoolingDown()
+                'widgets' => fn () => ! $ready || $isCoolingDown()
                     ? $this->emptyWidgets()
                     : WidgetController::getFrontendWidgets($tenantId, $locale),
             ],
 
-            'ziggy' => fn () => array_merge((new Ziggy)->toArray(), [
-                'location' => $request->url(),
-            ]),
+            'currentUrl' => $request->url(),
         ]);
     }
 }

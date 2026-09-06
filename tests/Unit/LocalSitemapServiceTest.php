@@ -22,6 +22,7 @@ it('builds route based sitemaps without a remote API request', function () {
     $this->get('/de/sitemap-pages.xml')
         ->assertOk()
         ->assertHeader('X-Sitemap-Source', 'local')
-        ->assertSee('https://example.test/de/reinigungsleistungen', false)
+        ->assertSee('https://example.test/de/kontakt', false)
+        ->assertDontSee('reinigungsleistungen', false)
         ->assertSee('https://example.test/de/kontakt', false);
 });

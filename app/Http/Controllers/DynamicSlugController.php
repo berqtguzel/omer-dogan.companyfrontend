@@ -741,10 +741,29 @@ class DynamicSlugController extends Controller
         }
     }
 
+    private function renderCorporatePage(array $page, string $locale, string $slug)
+    {
+        $path = \App\Support\CorporateRoutes::pagePath($page, $locale);
+        $prefixed = \App\Support\LocaleMapper::isSupportedWeb(request()->segment(1));
+        $target = ($prefixed ? '/'.$locale : '').$path;
+        if ($path !== '/'.trim($slug, '/')) {
+            $query = request()->getQueryString();
+            return redirect()->to($target.($query ? '?'.$query : ''), 301);
+        }
+        return Inertia::render('StaticPage', [
+            'document' => \App\Data\CorporatePageData::from($page, $locale),
+            'slug' => $slug, 'locale' => $locale,
+        ]);
+    }
+
     public function handle($locale, $slug)
     {
         $locale = $this->resolveLocale($locale);
         $this->applyLocale($locale);
+
+        if (! config('corporate_home.content_ready')) {
+            return $this->renderNotFound($locale, (string) $slug);
+        }
 
         $slug = $this->normalizeRouteSlug((string) $slug) ?: '';
 
@@ -752,7 +771,7 @@ class DynamicSlugController extends Controller
             return $this->renderNotFound($locale, $slug);
         }
 
-        if ($canonicalSlug = LegacyUrlNormalizer::serviceSlug($slug)) {
+        if ($canonicalSlug = LegacyUrlNormalizer::serviceSlug($slug) ?? LegacyUrlNormalizer::serviceLocationAlias($slug)) {
             $query = request()->getQueryString();
             $target = "/{$locale}/{$canonicalSlug}".($query ? '?'.$query : '');
 
@@ -840,11 +859,7 @@ class DynamicSlugController extends Controller
         }
 
         if (isset($pages[$slug]) && is_array($pages[$slug])) {
-            return Inertia::render('StaticPage', [
-                'page' => $pages[$slug],
-                'slug' => $slug,
-                'locale' => $locale,
-            ]);
+            return $this->renderCorporatePage($pages[$slug], $locale, $slug);
         }
 
         // A service-only partial route index must not turn real localized
@@ -853,11 +868,7 @@ class DynamicSlugController extends Controller
         $staticPage = StaticPageController::getPage($locale, $slug);
 
         if (is_array($staticPage) && ! empty($staticPage)) {
-            return Inertia::render('StaticPage', [
-                'page' => $staticPage,
-                'slug' => $slug,
-                'locale' => $locale,
-            ]);
+            return $this->renderCorporatePage($staticPage, $locale, $slug);
         }
 
         foreach (self::slugVariants($slug) as $slugVariant) {
@@ -884,6 +895,10 @@ class DynamicSlugController extends Controller
     {
         $locale = $this->resolveLocale($locale);
         $this->applyLocale($locale);
+
+        if (! config('corporate_home.content_ready')) {
+            return $this->renderNotFound($locale, (string) $slug);
+        }
 
         return app(ServiceShowController::class)->show($locale, $slug);
     }

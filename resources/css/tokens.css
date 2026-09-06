@@ -1,0 +1,58 @@
+/* Corporate design tokens. Panel values are mapped by corporateTheme.js.
+ * Responsive thresholds: 40rem / 60rem / 80rem (mobile first).
+ * Keep these literals in media queries; CSS variables cannot define queries.
+ */
+:root {
+    --brand-primary: #202729;
+    --brand-secondary: #62696b;
+    --brand-accent: #9a6248;
+    --surface-primary: #f7f6f2;
+    --surface-secondary: #ecedea;
+    --surface-card: #ffffff;
+    --surface-dark: #202729;
+    --text-primary: #242a2d;
+    --text-secondary: #62696b;
+    --text-inverse: #ffffff;
+    --border-subtle: #d9dcda;
+    --border-control: #a2a8a5;
+    --status-error: #a32929;
+    --font-heading: 'Manrope', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-size-small: 0.875rem;
+    --font-size-body: 1rem;
+    --font-size-lead: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+    --font-size-h3: clamp(1.375rem, 1.125rem + 1vw, 2rem);
+    --font-size-h2: clamp(2rem, 1.25rem + 3vw, 3.75rem);
+    --font-size-h1: clamp(2.75rem, 1.5rem + 5vw, 6rem);
+    --line-height-heading: 1.08;
+    --line-height-body: 1.7;
+    --container-width: 80rem;
+    --content-width: 65ch;
+    --container-gutter: clamp(1.25rem, 4vw, 3rem);
+    --section-spacing: clamp(3rem, 7vw, 7rem);
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --radius-small: 0.25rem;
+    --radius-medium: 0.5rem;
+    --shadow-card: 0 8px 24px rgb(32 39 41 / 6%);
+    --shadow-overlay: 0 16px 48px rgb(32 39 41 / 16%);
+    --z-header: 30;
+    --z-drawer: 50;
+    --z-modal: 70;
+    --z-consent: 90;
+    --duration-fast: 160ms;
+    --duration-normal: 240ms;
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --duration-fast: 0ms;
+        --duration-normal: 0ms;
+    }
+}

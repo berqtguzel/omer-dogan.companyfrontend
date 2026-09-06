@@ -18,18 +18,18 @@ class ContactFormController extends Controller
     {
         $mainTenant = OmrConfig::tenantForSharedContent();
         $locale = strtolower(trim($locale)) ?: 'de';
-        $cacheKey = "contact_forms_v2_{$mainTenant}_{$locale}";
-        $staleKey = "contact_forms_v2_stale_{$mainTenant}_{$locale}";
+        $cacheKey = "contact_forms_v3_{$mainTenant}_{$locale}";
+        $staleKey = "contact_forms_v3_stale_{$mainTenant}_{$locale}";
         $cached = Cache::get($cacheKey);
 
-        if (is_array($cached) && $cached !== []) {
+        if (is_array($cached)) {
             return collect($cached);
         }
 
-        $stale = Cache::get($staleKey);
+        $stale = Cache::get($staleKey) ?? Cache::get("contact_forms_v2_stale_{$mainTenant}_{$locale}");
 
         if (OmrCachedClient::isCoolingDown($mainTenant)) {
-            return collect(is_array($stale) && $stale !== [] ? $stale : self::fallbackForms());
+            return collect(is_array($stale) && $stale !== [] ? $stale : []);
         }
 
         try {
@@ -55,7 +55,7 @@ class ContactFormController extends Controller
                     'body' => $response->body(),
                 ]);
 
-                $fallback = is_array($stale) && $stale !== [] ? $stale : self::fallbackForms();
+                $fallback = is_array($stale) && $stale !== [] ? $stale : [];
                 Cache::put($cacheKey, $fallback, now()->addMinutes(5));
 
                 return collect($fallback);
@@ -64,9 +64,10 @@ class ContactFormController extends Controller
             $forms = self::normalizeForms($response->json()['data'] ?? []);
 
             if ($forms === []) {
-                Cache::put($cacheKey, self::fallbackForms(), now()->addMinutes(5));
+                $fallback = is_array($stale) ? $stale : [];
+                Cache::put($cacheKey, $fallback, now()->addMinutes(5));
 
-                return collect(is_array($stale) && $stale !== [] ? $stale : self::fallbackForms());
+                return collect($fallback);
             }
 
             Cache::put($cacheKey, $forms, now()->addDays(7));
@@ -78,7 +79,7 @@ class ContactFormController extends Controller
 
             Log::error('ContactForms Fetch Error: '.$e->getMessage());
 
-            $fallback = is_array($stale) && $stale !== [] ? $stale : self::fallbackForms();
+            $fallback = is_array($stale) && $stale !== [] ? $stale : [];
             Cache::put($cacheKey, $fallback, now()->addMinutes(5));
 
             return collect($fallback);
@@ -100,20 +101,6 @@ class ContactFormController extends Controller
                 'options' => $field['options'] ?? [],
             ])->values()->all(),
         ])->filter(fn ($form) => $form['fields'] !== [])->values()->all();
-    }
-
-    private static function fallbackForms(): array
-    {
-        return [[
-            'id' => 1,
-            'name' => 'Contact',
-            'fields' => [
-                ['id' => 0, 'name' => 'field_0', 'label' => 'Name', 'type' => 'text', 'required' => true, 'placeholder' => '', 'options' => []],
-                ['id' => 1, 'name' => 'field_1', 'label' => 'Phone', 'type' => 'tel', 'required' => true, 'placeholder' => '', 'options' => []],
-                ['id' => 2, 'name' => 'field_2', 'label' => 'E-Mail', 'type' => 'email', 'required' => true, 'placeholder' => '', 'options' => []],
-                ['id' => 3, 'name' => 'field_3', 'label' => 'Message', 'type' => 'textarea', 'required' => true, 'placeholder' => '', 'options' => []],
-            ],
-        ]];
     }
 
     public function submit(Request $request, $id)
