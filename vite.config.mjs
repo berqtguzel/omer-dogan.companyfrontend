@@ -6,6 +6,7 @@ export default defineConfig(({ command }) => {
     const isBuild = command === 'build';
 
     return {
+        assetsInclude: ['**/*.glb'],
         plugins: [
             laravel({
                 input: [

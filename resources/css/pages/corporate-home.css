@@ -1,4 +1,21 @@
 .group-home, .group-preview { color: var(--text-primary); background: var(--surface-primary); }
+.company-image-wall { position: relative; margin-block: 0 var(--space-12); border-radius: 12px; overflow: hidden; background: #dfe6e1; }
+.company-image-wall__motion { height: clamp(360px, 38vw, 520px); }
+.company-image-wall__pause { position: absolute; right: 16px; bottom: 16px; padding: 10px 16px; border-radius: 999px; background: #202929; color: #fff; font-size: .8rem; z-index: 1; }
+.company-image-wall__static { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 12px; }
+.company-image-wall__static img { width: 100%; height: auto; aspect-ratio: 13 / 9; object-fit: cover; border-radius: 8px; }
+@media (max-width: 767px) { .company-image-wall__static { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 8px; } }
+.home-ambient { position: relative; isolation: isolate; overflow: hidden; }
+.home-ambient__art { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; contain: strict; }
+.home-ambient__wash { position: absolute; inset: -8%; background: radial-gradient(ellipse at 12% 30%, rgb(58 157 143 / 16%), transparent 48%), radial-gradient(ellipse at 88% 70%, rgb(202 142 90 / 17%), transparent 46%); animation: home-ambient-drift 22s ease-in-out infinite alternate; animation-play-state: paused; }
+.home-ambient__grid { position: absolute; inset: 0; background-image: radial-gradient(rgb(62 111 103 / 22%) .8px, transparent .8px); background-size: 26px 26px; mask-image: linear-gradient(110deg, transparent 15%, #000 65%, transparent); opacity: .55; }
+.home-ambient__content { position: relative; }
+.home-ambient[data-playing="true"] .home-ambient__wash { animation-play-state: running; }
+@keyframes home-ambient-drift { from { transform: translate3d(-2%, -1%, 0); } to { transform: translate3d(2%, 2%, 0); } }
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+    .home-ambient__wash { animation: none; }
+    .home-ambient__grid { opacity: .3; }
+}
 .group-eyebrow { display: flex; align-items: center; gap: var(--space-4); margin: 0 0 var(--space-6); font-size: var(--font-size-small); font-weight: 600; letter-spacing: 0.07em; }
 .group-eyebrow__line { width: 2rem; height: 1px; background: var(--brand-accent); }
 .group-number { color: var(--text-secondary); font-size: var(--font-size-small); font-variant-numeric: tabular-nums; }
@@ -194,3 +211,11 @@
 @media (prefers-reduced-motion: reduce) {
     .group-hero__backdrop video, .group-hero__backdrop img, .group-hero__content, .group-hero__glow, .group-hero__scroll i, .group-map__route, .group-map__pin.is-active .group-map__pulse { animation: none; }
 }
+/* Keep logo transparency and fit the complete image in its tile. */
+.company-image-wall { background: transparent; }
+.company-image-wall .drift-wall__inner { background: transparent; display: grid; place-items: center; }
+.company-image-wall .drift-wall__tile img { object-fit: contain; object-position: center; padding: 18px; filter: none; }
+.company-image-wall .drift-wall__overlay { display: none; }
+.company-image-wall .drift-wall__tile.is-active .drift-wall__inner { box-shadow: none; }
+.company-image-wall__logo { display: grid; place-items: center; min-width: 0; }
+.company-image-wall__static img { object-fit: contain; object-position: center; padding: 14px; }

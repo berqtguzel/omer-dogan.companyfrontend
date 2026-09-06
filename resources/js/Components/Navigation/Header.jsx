@@ -4,6 +4,7 @@ import Container from '@/Components/Common/Container';
 import Brand from './Brand';
 import SiteLink from './SiteLink';
 import NavigationTree from './NavigationTree';
+import GooeyNav from './GooeyNav';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 import '@/../css/components/navigation.css';
@@ -53,7 +54,7 @@ export default function Header({ site, labels, locale, languages }) {
             </div>
             <nav className="corporate-header__nav" aria-label={labels.navigation}
                 onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) closeBranches(); }}>
-                <NavigationTree items={site.header} labels={labels} onNavigate={closeBranches} />
+                <GooeyNav><NavigationTree items={site.header} labels={labels} onNavigate={closeBranches} /></GooeyNav>
             </nav>
         </Container>
         <MobileMenu open={open} onClose={close} site={site} labels={labels} locale={locale} languages={languages} />

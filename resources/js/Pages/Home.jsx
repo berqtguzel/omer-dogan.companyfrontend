@@ -10,6 +10,7 @@ import ProjectsSection from '@/Components/Home/ProjectsSection';
 import GroupNetwork from '@/Components/Home/GroupNetwork';
 import GroupVision from '@/Components/Home/GroupVision';
 import HomeCallsToAction from '@/Components/Home/HomeCallsToAction';
+import HomeAmbientBackground from '@/Components/Home/HomeAmbientBackground';
 import '@/../css/pages/corporate-home.css';
 
 export default function Home({ home }) {
@@ -28,9 +29,13 @@ export default function Home({ home }) {
         <div className="group-home">
             <CorporateHero hero={home.hero} areas={home.businessAreas} contactLink={home.contactLink} />
             <GroupMetrics items={home.metrics} />
-            <BusinessAreasSection areas={home.businessAreas} />
+            <HomeAmbientBackground>
+                <BusinessAreasSection areas={home.businessAreas} />
+            </HomeAmbientBackground>
             <CompaniesSection companies={home.companies} />
-            <ProjectsSection projects={home.projects} />
+            <HomeAmbientBackground>
+                <ProjectsSection projects={home.projects} />
+            </HomeAmbientBackground>
             <GroupNetwork countries={home.countries} />
             <GroupVision vision={home.vision} />
             <HomeCallsToAction careerLink={home.careerLink} contactLink={home.contactLink} />

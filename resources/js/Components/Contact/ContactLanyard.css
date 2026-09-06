@@ -1,0 +1,14 @@
+.contact-lanyard { position: fixed; top: var(--lanyard-top, 80px); right: 0; width: min(360px, 100vw); z-index: calc(var(--z-header, 50) + 1); }
+.contact-lanyard__visual { height: 360px; overflow: hidden; }
+.contact-lanyard .lanyard-wrapper { height: 360px; }
+.contact-lanyard canvas { touch-action: none; }
+.contact-lanyard__static { position: relative; margin: 100px auto 0; width: 90px; height: 118px; display: grid; place-items: center; background: #e6eee9; border: 1px solid #ddd8cf; border-radius: 7px; box-shadow: 0 8px 20px #00000012; transform: rotate(-5deg); }
+.contact-lanyard__static img { width: 85%; height: 75%; object-fit: contain; }
+.contact-lanyard__strap { position: absolute; bottom: 100%; height: 120px; width: 10px; background: #263d38; }
+@media (max-width: 767px) { .contact-lanyard { width: 76px; right: 3px; } .contact-lanyard__visual { height: 155px; } .contact-lanyard__static { margin-top: 75px; height: 60px; width: 45px; } }
+@media (min-width: 768px) {
+    .contact-lanyard { inset: 0; width: 100vw; height: 100dvh; pointer-events: none; }
+    .contact-lanyard__visual, .contact-lanyard .lanyard-wrapper { width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+    .contact-lanyard canvas { pointer-events: none; }
+    .contact-lanyard__static { position: absolute; right: 90px; top: var(--lanyard-top, 80px); }
+}

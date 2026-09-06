@@ -3,6 +3,7 @@ import { Head, usePage } from "@inertiajs/react";
 import SeoHead from "@/Components/SeoHead";
 import TrackingHead from "@/Components/TrackingHead";
 import Header from "@/Components/Navigation/Header";
+import ContactLanyard from '@/Components/Contact/ContactLanyard';
 import Footer from "@/Components/Navigation/Footer";
 import { corporateTheme } from "@/utils/corporateTheme";
 import { navigationLabels } from "@/i18n/navigation";
@@ -166,6 +167,7 @@ const AppLayout = memo(function AppLayout({ children }) {
             <div className="corporate-site corporate-shell" style={{ ...rootStyles, ...corporateTheme(colors) }}>
                 <a href="#main-content" className="corporate-skip">{labels.skip}</a>
                 {site && <Header site={site} labels={labels} locale={locale} languages={props.languages || []} />}
+                {site && <ContactLanyard />}
                 <main id="main-content" tabIndex={-1} className="corporate-main">{children}</main>
                 {site && <Footer site={site} labels={labels} year={props.currentYear} />}
             </div>
